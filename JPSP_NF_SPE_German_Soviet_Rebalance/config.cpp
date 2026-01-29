@@ -1,0 +1,106 @@
+#define _ARMA_
+
+class CfgPatches
+{
+	class JPSP_NF_SPE_German_Soviet_Rebalance
+	{
+		units[] = {};
+        vehicles[] = {};
+		weapons[] = {};
+		requiredVersion = 1;
+		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","WW2_SPE_Assets_c_Vehicles_Weapons_c","WW2_SPE_Assets_c_Vehicles_AmmoParameters_c","JPSP_NF_SPE_Tank_Overhaul"};
+		ammo[] = {};
+	};
+};
+
+class CfgAmmo
+{
+    #define MACRO_CALIBER(mm,speed) caliber=(mm /((15 * speed)/1000));
+    
+	// Inherit
+	class SPE_Shell_base;
+	class SPE_ShellAPCR_base;
+	class SPE_ammo_APHE_penetrator;
+	class SPE_ammo_apcr_penetrator;
+
+	// Panzer IV
+	class SPE_PzGr39_KWK40_AP: SPE_Shell_base
+	{
+		deflecting = 14; //29
+	};
+	class SPE_PzGr39_KWK40_AP_penetrator: SPE_ammo_APHE_penetrator
+	{
+		// All mm values multipled by 1.25 due to NF modeling
+        MACRO_CALIBER(186.25,792) //149mm 792m/s
+	};
+
+	class SPE_PzGr40_KWK40_APCR: SPE_ShellAPCR_base
+	{
+		deflecting = 17; //34
+	};
+	class SPE_PzGr40_KWK40_APCR_penetrator: SPE_ammo_apcr_penetrator
+	{
+		MACRO_CALIBER(251.25,989) //201mm 989m/s
+	};
+	// Panther
+	class SPE_PzGr3942_KwK42_AP: SPE_Shell_base
+	{
+		deflecting = 14; //29
+	};
+	class SPE_PzGr3942_KwK42_AP_penetrator: SPE_ammo_APHE_penetrator
+	{
+		MACRO_CALIBER(236.25,935) //189mm 935/s
+	};
+
+	class SPE_PzGr4042_KwK42_APCR: SPE_ShellAPCR_base
+	{
+		deflecting = 17; //34
+	};
+	class SPE_PzGr4042_KwK42_APCR_penetrator: SPE_ammo_apcr_penetrator
+	{
+		MACRO_CALIBER(337.5,1120) //270mm 1120/s
+	};
+	// Tiger
+	class SPE_PzGr39_KwK36_AP: SPE_Shell_base
+	{
+		deflecting = 14; //29
+	};
+	class SPE_PzGr39_KwK36_AP_penetrator: SPE_ammo_APHE_penetrator
+	{
+		MACRO_CALIBER(207.5,779) //166mm 779/s
+	};
+	
+	class SPE_PzGr40_KwK36_APCR: SPE_ShellAPCR_base
+	{
+		deflecting = 17; //34
+	};
+	class SPE_PzGr40_KwK36_APCR_penetrator: SPE_ammo_apcr_penetrator
+	{
+		MACRO_CALIBER(275,930) //220mm 930/s
+	};
+
+	// Jagdpanther
+	class SPE_PzGr43_AP: SPE_Shell_base
+	{
+		deflecting = 14; //29
+	};
+	class SPE_PzGr43_AP_penetrator: SPE_ammo_APHE_penetrator
+	{
+		MACRO_CALIBER(293.75,1000) //235mm 1000/s
+	};
+
+	class SPE_PzGr40_APCR: SPE_ShellAPCR_base
+	{
+		deflecting = 17; //34
+	};
+	class SPE_PzGr40_APCR_penetrator: SPE_ammo_apcr_penetrator
+	{
+
+		MACRO_CALIBER(386.25,1130) //309mm 1130/s
+	};
+	// T-34-85 (and M10)
+	class SPE_76mm_M7_M62_APHE: SPE_Shell_base
+	{
+		deflecting = 43.5; //29 x 1.5
+	};
+};
