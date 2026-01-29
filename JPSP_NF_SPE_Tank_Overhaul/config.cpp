@@ -951,6 +951,92 @@ class CfgVehicles
 				init = "(_this select 0) setVariable ['SPE_isTank',true];";
 			};
 		};
+
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				armor = -190; //1
+				radius = 0.16;
+				material = -1;
+				name = "firegeo_hull";
+				visual = "damage_hull";
+				passThrough = 1;
+				minimalHit = 0.14; //0.4
+			};
+			class HitLTrack: HitLTrack
+			{
+				armor = 1;
+				radius = 0.18;
+				material = -1;
+				name = "firegeo_track_L";
+				visual = "firegeo_track_L";
+				passThrough = 0;
+				minimalHit = 0.02;
+			};
+			class HitRTrack: HitRTrack
+			{
+				armor = 1;
+				radius = 0.18;
+				material = -1;
+				name = "firegeo_track_R";
+				visual = "firegeo_track_R";
+				passThrough = 0;
+				minimalHit = 0.02;
+			};
+			class HitEngine: HitEngine
+			{
+				armor = 0.4; //1.5
+				radius = 0.14;
+				material = -1;
+				name = "firegeo_engine";
+				visual = "firegeo_engine";
+				passThrough = 1; //0
+				minimalHit = 0.14; //0.3
+
+				//SPE
+                class DestructEffects
+                {
+                    ammoExplosionEffect = "";
+					class SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "particles";
+                        type = "SmallWreckSmoke";
+                    };
+                    class SPE_Engine_Fire: SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "particles";
+                        type = "SmallFireFPlace";
+                    };
+                    class SPE_Engine_Sounds: SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "sound";
+                        type = "Fire";
+                    };
+                    class SPE_Engine_Sparks: SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "particles";
+                        type = "FireSparks";
+                    };
+                };
+			};
+		};
 	};
 	class NORTH_FIN_T34_76_1943: NORTH_Tank_Base
 	{
