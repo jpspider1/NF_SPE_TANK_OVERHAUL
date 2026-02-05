@@ -958,7 +958,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = -190; //1
+				armor = 1; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
@@ -1173,7 +1173,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = -190; //1
+				armor = 1; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
@@ -1390,7 +1390,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = -190; //1
+				armor = 1; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
@@ -1606,7 +1606,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = -190; //1
+				armor = 1; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
@@ -1792,7 +1792,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = -190; //1
+				armor = 1; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
@@ -1977,7 +1977,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = -190; //1
+				armor = 1; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
@@ -2195,7 +2195,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = -190; //1
+				armor = 1; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
