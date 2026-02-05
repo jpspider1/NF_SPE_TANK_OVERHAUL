@@ -1703,6 +1703,73 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
+
+				// SPE Components
+				class Components
+				{
+					class VehicleSystemsTemplateLeftGunner;
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "EmptyDisplay";
+						forcedDisplay = "EmptyDisplay";
+						left = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_X"",	(safezoneX + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+
+					class VehicleSystemsTemplateRightGunner;
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "AmmoDisplay";
+						forcedDisplay = "AmmoDisplay";
+						right = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_X"",	((safezoneX + safezoneW) - (		(10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)) + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+				};
+
 				weapons[] = {"JPSP_NF_76mm_F32","NORTH_DT_01"};
 				magazines[] = {"SPE_50x_M61_M1_AP","SPE_50x_M48_HE",
 				"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
@@ -1819,6 +1886,72 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
+				// SPE Components
+				class Components
+				{
+					class VehicleSystemsTemplateLeftGunner;
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "EmptyDisplay";
+						forcedDisplay = "EmptyDisplay";
+						left = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_X"",	(safezoneX + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+
+					class VehicleSystemsTemplateRightGunner;
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "AmmoDisplay";
+						forcedDisplay = "AmmoDisplay";
+						right = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_X"",	((safezoneX + safezoneW) - (		(10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)) + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+				};
+
 				//weapons[] = {"SPE_M1_76mm_L55","SPE_M1919A4_coax"};
 				//magazines[] = {"SPE_6x_76mm_M1_M93_APCR","SPE_30x_76mm_M1_M62_APCBC","SPE_28x_76mm_M1_M42_HE","SPE_7x_76mm_M1_M89_SMK","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4"};
 				weapons[] = {"JPSP_NF_76mm_ZiS5","NORTH_DT_01"};
