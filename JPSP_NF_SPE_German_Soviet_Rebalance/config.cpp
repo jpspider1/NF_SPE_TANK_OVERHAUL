@@ -114,7 +114,7 @@ class CfgAmmo
 		MACRO_CALIBER(386.25,1130) //309mm 1130/s
 	};
 
-	// Panzer III J
+	// Panzer III J, L, M
 	class SPE_50mm_PzGr39_AP: SPE_Shell_base
 	{
 		hit = 295; //195
