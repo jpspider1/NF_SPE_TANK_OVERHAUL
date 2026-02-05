@@ -24,3 +24,38 @@ T-34/85 Obr. 1945 (Caged)
 
 T-70M Obr. 1942
 - Main weapon changed to a renamed SPE M6 L53 gun (37mm gun on M8)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+V1.0.1 Enhancement to damage balancing and KV1 series
+------------------------------------------------------------------------------------------------------------------------------------------------------
+- Focus is on KV1 and making German shells different
+------------------------------------------------------------------------------------------------------------------------------------------------------
+General
+- NF frontal armor uses weird armor RVMAT with high deflection property
+- German shells need to have deflecting 0 in order to not bounce off front slope of the T-34s
+- KV-1 frontal armor despite deflecting 0 still bounces or absorbs German 75mm+ and 88mm+ shells
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+All Soviet tanks affected so far
+- armor value standardized at SPE 450
+- armorStructural value standardized at SPE 50
+
+KV1 series
+- Main weapon changed to renamed SPE M3 L40 gun as 76mm F-32
+- SPE gunner ammo components
+- SPE vehicle scripting
+
+Panzer III J L M
+- AP and APCR Ammunition added with 1.25 increase caliber
+- Deflecting halved
+
+All Soviet hithull class
+- Reduced passThrough value from 10 to 1
+- Increased armor from set as -190 to multiplier of 1
+
+All German shells
+- Reduced hit back to normal SPE levels
+
+All German shells above 75mm
+- Panzer IV G, Panther, Tiger H1, Jagdpanther, Nashorn
+- Deflecting changed to 0 in order to go through front of T-34 series
