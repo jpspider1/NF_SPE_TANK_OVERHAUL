@@ -976,7 +976,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -987,7 +987,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitEngine: HitEngine
 			{
@@ -1191,7 +1191,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1202,7 +1202,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitEngine: HitEngine
 			{
@@ -1408,7 +1408,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1419,7 +1419,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitEngine: HitEngine
 			{
@@ -1624,7 +1624,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1635,7 +1635,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitEngine: HitEngine
 			{
@@ -1810,7 +1810,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1821,7 +1821,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitEngine: HitEngine
 			{
@@ -1995,7 +1995,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -2006,7 +2006,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitEngine: HitEngine
 			{
@@ -2213,7 +2213,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -2224,7 +2224,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				explosionShielding = 3; //SPE
+				
 			};
 			class HitEngine: HitEngine
 			{
