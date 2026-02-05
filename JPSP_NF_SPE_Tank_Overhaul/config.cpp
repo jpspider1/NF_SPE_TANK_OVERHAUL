@@ -970,7 +970,7 @@ class CfgVehicles
 			class HitLTrack: HitLTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_L";
 				visual = "firegeo_track_L";
@@ -981,7 +981,7 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
@@ -1185,7 +1185,7 @@ class CfgVehicles
 			class HitLTrack: HitLTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_L";
 				visual = "firegeo_track_L";
@@ -1196,7 +1196,7 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
@@ -1402,7 +1402,7 @@ class CfgVehicles
 			class HitLTrack: HitLTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_L";
 				visual = "firegeo_track_L";
@@ -1413,7 +1413,7 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
@@ -1618,7 +1618,7 @@ class CfgVehicles
 			class HitLTrack: HitLTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_L";
 				visual = "firegeo_track_L";
@@ -1629,7 +1629,7 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
@@ -1804,7 +1804,7 @@ class CfgVehicles
 			class HitLTrack: HitLTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_L";
 				visual = "firegeo_track_L";
@@ -1815,7 +1815,7 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
@@ -1989,7 +1989,7 @@ class CfgVehicles
 			class HitLTrack: HitLTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_L";
 				visual = "firegeo_track_L";
@@ -2000,7 +2000,7 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
@@ -2207,7 +2207,7 @@ class CfgVehicles
 			class HitLTrack: HitLTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_L";
 				visual = "firegeo_track_L";
@@ -2218,7 +2218,7 @@ class CfgVehicles
 			class HitRTrack: HitRTrack
 			{
 				armor = 1;
-				radius = 0.15; //0.18
+				radius = 0.25; //0.18
 				material = -1;
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
