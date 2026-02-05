@@ -113,6 +113,30 @@ class CfgAmmo
 		hit = 360; //260
 		MACRO_CALIBER(386.25,1130) //309mm 1130/s
 	};
+
+	// Panzer III J
+	class SPE_50mm_PzGr39_AP: SPE_Shell_base
+	{
+		hit = 295; //195
+		deflecting = 14; //29
+	};
+	class SPE_50mm_PzGr39_AP_penetrator: SPE_ammo_APHE_penetrator
+	{
+		hit = 295; //195
+		MACRO_CALIBER(131.25,834) //105mm 834/s
+	};
+
+	class SPE_50mm_PzGr40_APCR: SPE_ShellAPCR_base
+	{
+		hit = 295; //195
+		deflecting = 17; //34
+	};
+	class SPE_50mm_PzGr40_APCR_penetrator: SPE_ammo_apcr_penetrator
+	{
+		hit = 295; //195
+		MACRO_CALIBER(176.25,1198) //141mm 1198/s
+	};
+
 	// T-34-85 (and M10)
 	class SPE_76mm_M7_M62_APHE: SPE_Shell_base
 	{
