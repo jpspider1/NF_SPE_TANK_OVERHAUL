@@ -963,7 +963,7 @@ class CfgVehicles
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 10; //1
+				passThrough = 1; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1178,7 +1178,7 @@ class CfgVehicles
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 10; //1
+				passThrough = 1; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1395,7 +1395,7 @@ class CfgVehicles
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 10; //1
+				passThrough = 1; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1611,7 +1611,7 @@ class CfgVehicles
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 10; //1
+				passThrough = 1; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1797,7 +1797,7 @@ class CfgVehicles
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 10; //1
+				passThrough = 1; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1982,7 +1982,7 @@ class CfgVehicles
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 10; //1
+				passThrough = 1; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -2200,7 +2200,7 @@ class CfgVehicles
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 10; //1
+				passThrough = 1; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
