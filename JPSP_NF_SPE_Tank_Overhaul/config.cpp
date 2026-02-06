@@ -1957,7 +1957,7 @@ class CfgVehicles
 				//weapons[] = {"SPE_M1_76mm_L55","SPE_M1919A4_coax"};
 				//magazines[] = {"SPE_6x_76mm_M1_M93_APCR","SPE_30x_76mm_M1_M62_APCBC","SPE_28x_76mm_M1_M42_HE","SPE_7x_76mm_M1_M89_SMK","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4"};
 				weapons[] = {"JPSP_NF_76mm_ZiS5","NORTH_DT_01"};
-				magazines[] = {"SPE_30x_76mm_M1_M62_APCBC","SPE_28x_76mm_M1_M42_HE",
+				magazines[] = {"JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_10x_BR354P_APCR","JPSP_10x_OF350M_HE","JPSP_10x_OF350M_HE","JPSP_10x_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel","JPSP_10x_D350A_SMK",
 				"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
 			};
 		};
@@ -2537,6 +2537,36 @@ class CfgWeapons
 			magazineWell[] = {""};
         };
     };
+
+	class JPSP_NF_76mm_ZiS5: SPE_M3_L40
+	{
+		displayName = "76mm ZiS-5";
+		class MODE_AI_APCR: SPE_M3_L40_APCR_AI
+		{
+		displayName = "76mm ZiS-5";
+			magazines[] = {"JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_HE: SPE_M3_L40_HE_AI
+		{
+		displayName = "76mm ZiS-5";
+			magazines[] = {"JPSP_OF350M_HE","JPSP_10x_OF350M_HE"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_SMOKE: SPE_M3_L40_SMK_AI
+		{
+		displayName = "76mm ZiS-5";
+			magazines[] = {"JPSP_D350A_SMK","JPSP_10x_D350A_SMK"};
+			magazineWell[] = {""};
+		};
+		class MODE_PLAYER_ALL: SPE_M3_L40_base
+        {
+            displayName = "76mm ZiS-5";
+			magazines[] = {"JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel",
+				"JPSP_OF350M_HE","JPSP_10x_OF350M_HE","JPSP_D350A_SMK","JPSP_10x_D350A_SMK"};
+			magazineWell[] = {""};
+        };
+	};
 	//T-28
 	class JPSP_NF_76mm_L10: SPE_M3_L40
     {
@@ -2606,16 +2636,6 @@ class CfgWeapons
 		class MODE_PLAYER_ALL: SPE_M7_76mm_base
         {
             displayName = "85mm ZiS-S-53";
-        };
-	};
-	class SPE_M1_76mm_base;
-	class SPE_M1_76mm_L55;
-	class JPSP_NF_76mm_ZiS5: SPE_M1_76mm_L55
-	{
-		displayName = "76mm ZiS-5";
-		class MODE_PLAYER_ALL: SPE_M7_76mm_base
-        {
-            displayName = "76mm ZiS-5";
         };
 	};
 	class SPE_M6_L53_base;
@@ -2707,4 +2727,6 @@ class cfgMagazines
 	{
 		count = 10;
 	};
+	////////// T-34-85 //////////
+
 };
