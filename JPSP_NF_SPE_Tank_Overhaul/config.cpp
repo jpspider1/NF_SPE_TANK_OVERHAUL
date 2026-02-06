@@ -9,7 +9,8 @@ class CfgPatches
 		weapons[] = {"JPSP_NF_76mm_F34","JPSP_NF_76mm_L10","JPSP_NF_85mm_ZiSS53","JPSP_NF_76mm_F32","JPSP_NF_76mm_ZiS5","JPSP_NF_45mm"};
 		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_OF350M_HE","JPSP_10x_OF350M_HE",
 			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT",
-			"JPSP_BR365_APHEBC","JPSP_10x_BR365_APHEBC","JPSP_BR365K_APHE","JPSP_10x_BR365K_APHE","JPSP_BR365P_APCR","JPSP_10x_BR365P_APCR","JPSP_O365K_HE","JPSP_10x_O365K_HE"
+			"JPSP_BR365_APHEBC","JPSP_10x_BR365_APHEBC","JPSP_BR365K_APHE","JPSP_10x_BR365K_APHE","JPSP_BR365P_APCR","JPSP_10x_BR365P_APCR","JPSP_O365K_HE","JPSP_10x_O365K_HE",
+			"JPSP_BR240_APHEBC", "JPSP_10x_BR240_APHEBC", "JPSP_BR240SP_APBC", "JPSP_10x_BR240SP_APBC"
 		};
 		requiredVersion = 1;
 		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","NORTH_vehicles_cfg","NORTH_weapons_cfg"};
@@ -2146,7 +2147,7 @@ class CfgVehicles
 				//weapons[] = {"SPE_M6_L53","SPE_M1919A4_coax"};
 				//magazines[] = {"SPE_20x_Shell_37L57_M51_APC","SPE_15x_Shell_37L57_M74_AP","SPE_30x_Shell_37L57_M63_HE","SPE_15x_Shell_37L57_M2_Canister","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4","SPE_250Rnd_M1919A4"};
 				weapons[] = {"JPSP_NF_45mm","NORTH_DT_01"};
-				magazines[] = {"SPE_20x_Shell_37L57_M51_APC","SPE_15x_Shell_37L57_M74_AP","SPE_30x_Shell_37L57_M63_HE","SPE_15x_Shell_37L57_M2_Canister",
+				magazines[] = {"JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC",
 				"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
 			};
 		};
@@ -2359,7 +2360,9 @@ class CfgVehicles
 				};
 				
 				weapons[] = {"JPSP_NF_45mm","NORTH_DT_01"};
-				magazines[] = {"SPE_50x_Shell_37L57_M51_APC","SPE_50x_Shell_37L57_M51_APC","SPE_50x_Shell_37L57_M63_HE",
+				magazines[] = {
+					"JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC",
+					"JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC",
 					"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
 			};
 		};
@@ -2672,9 +2675,17 @@ class CfgWeapons
 	class JPSP_NF_45mm: SPE_M6_L53
 	{
 		displayName = "45 mm 20K Obr. 1932-34";
+		class MODE_AI_HE: MODE_AI_HE
+		{
+            displayName = "45 mm 20K Obr. 1932-34";
+			magazines[] = {"JPSP_BR240_APHEBC", "JPSP_10x_BR240_APHEBC", "JPSP_BR240SP_APBC", "JPSP_10x_BR240SP_APBC"};
+			magazineWell[] = {""};
+		};
 		class MODE_PLAYER_ALL: SPE_M6_L53_base
         {
             displayName = "45 mm 20K Obr. 1932-34";
+			magazines[] = {"JPSP_BR240_APHEBC", "JPSP_10x_BR240_APHEBC", "JPSP_BR240SP_APBC", "JPSP_10x_BR240SP_APBC"};
+			magazineWell[] = {""};
         };
 	};
 };
@@ -2796,6 +2807,29 @@ class cfgMagazines
 		displayName = "O-365K (HE)";
 	};
 	class JPSP_10x_O365K_HE: JPSP_O365K_HE
+	{
+		count = 10;
+	};
+	//T-70
+	//Weaker AP
+	class SPE_Shell_37L57_M74_AP;
+	class JPSP_BR240_APHEBC: SPE_Shell_37L57_M74_AP
+	{
+		displayName = "BR-240 (APHEBC)";
+		displayNameShort = "APHEBC";
+	};
+	class JPSP_10x_BR240_APHEBC: JPSP_BR240_APHEBC
+	{
+		count = 10;
+	};
+	//Stronger AP
+	class SPE_Shell_37L57_M51_APC;
+	class JPSP_BR240SP_APBC: SPE_Shell_37L57_M51_APC
+	{
+		displayName = "BR-240SP(APBC)";
+		displayNameShort = "APBC";
+	};
+	class JPSP_10x_BR240SP_APBC: JPSP_BR240SP_APBC
 	{
 		count = 10;
 	};
