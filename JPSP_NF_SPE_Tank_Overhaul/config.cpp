@@ -2498,12 +2498,13 @@ class CfgVehicles
 		};
 	};
 };
+
+//Inherit
+class MODE_AI_APCR;
+class MODE_AI_HE;
+class MODE_AI_SMOKE;
 class CfgWeapons
 {
-	//Inherit
-	class MODE_AI_APCR;
-	class MODE_AI_HE;
-	class MODE_AI_SMOKE;
 	//85mm ZiS-S-53
     class SPE_M3_L40_base;
     class SPE_M3_L40;
