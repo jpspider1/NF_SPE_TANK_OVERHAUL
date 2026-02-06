@@ -6,7 +6,7 @@ class CfgPatches
 	{
 		units[] = {};
         vehicles[] = {};
-		weapons[] = {"JPSP_NF_76mm_F34","JPSP_NF_85mm_ZiSS53","JPSP_NF_76mm_F32","JPSP_NF_76mm_ZiS5","JPSP_NF_45mm"};
+		weapons[] = {"JPSP_NF_76mm_F34","JPSP_NF_76mm_L10","JPSP_NF_85mm_ZiSS53","JPSP_NF_76mm_F32","JPSP_NF_76mm_ZiS5","JPSP_NF_45mm"};
 		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_OF350M_HE","JPSP_10x_OF350M_HE",
 			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT"};
 		requiredVersion = 1;
@@ -2537,6 +2537,37 @@ class CfgWeapons
 			magazineWell[] = {""};
         };
     };
+
+	class JPSP_NF_76mm_L10: SPE_M3_L40
+    {
+        displayName = "76mm L-10";
+		class MODE_AI_APCR: SPE_M3_L40_APCR_AI
+		{
+			displayName = "76mm L-10";
+			magazines[] = {""};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_HE: SPE_M3_L40_HE_AI
+		{
+			displayName = "76mm L-10";
+			magazines[] = {"JPSP_OF350M_HE","JPSP_10x_OF350M_HE"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_SMOKE: SPE_M3_L40_SMK_AI
+		{
+			displayName = "76mm L-10";
+			magazines[] = {""};
+			magazineWell[] = {""};
+		};
+        class MODE_PLAYER_ALL: SPE_M3_L40_base
+        {
+            displayName = "76mm L-10";
+			magazines[] = {"JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel",
+				"JPSP_OF350M_HE","JPSP_10x_OF350M_HE"};
+			magazineWell[] = {""};
+        };
+    };
+
     class JPSP_NF_76mm_F32: SPE_M3_L40
     {
         displayName = "76mm F-32";
