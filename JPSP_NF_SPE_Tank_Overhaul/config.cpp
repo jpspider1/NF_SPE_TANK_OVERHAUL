@@ -2568,7 +2568,7 @@ class CfgWeapons
         };
     };
 
-	//KV-1E
+	//KV-1 1940, KV-1E 1940
     class JPSP_NF_76mm_F32: SPE_M3_L40
     {
         displayName = "76mm F-32";
