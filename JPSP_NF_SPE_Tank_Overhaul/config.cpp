@@ -2509,6 +2509,12 @@ class CfgWeapons
 	class SPE_M3_L40_SMK_AI;
     class SPE_M3_L40_base;
     class SPE_M3_L40;
+
+	class SPE_M7_76mm_base;
+	class SPE_M7_76mm_L55;
+	class SPE_M7_76mm_APCR_AI;
+	class SPE_M7_76mm_HE_AI;
+	class SPE_M7_76mm_SMK_AI;
 	// T-34-76 1941, T-34-76 1943
     class JPSP_NF_76mm_F34: SPE_M3_L40
     {
@@ -2631,8 +2637,6 @@ class CfgWeapons
         };
     };
 	// T-34-85
-	class SPE_M7_76mm_base;
-	class SPE_M7_76mm_L55;
 	class JPSP_NF_85mm_ZiSS53: SPE_M7_76mm_L55
 	{
 		displayName = "85mm ZiS-S-53";
