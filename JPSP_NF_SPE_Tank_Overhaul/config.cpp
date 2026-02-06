@@ -2532,8 +2532,8 @@ class CfgWeapons
         class MODE_PLAYER_ALL: SPE_M3_L40_base
         {
             displayName = "76mm F-34";
-			magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel","JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_BR350A_AP","JPSP_10x_BR350A_AP",
-				"JPSP_OF350M_HE","JPSP_10x_OF350M_HE","JPSP_D350A_SMK","JPSP_10x_D350A_SMK","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT"};
+			magazines[] = {"JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT","JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel",
+				"JPSP_OF350M_HE","JPSP_10x_OF350M_HE","JPSP_D350A_SMK","JPSP_10x_D350A_SMK"};
 			magazineWell[] = {""};
         };
     };
@@ -2605,7 +2605,7 @@ class cfgMagazines
 	class SPE_M72_AP;
 	class JPSP_BR350A_AP: SPE_M72_AP
 	{
-		displayName = "BR-350A (MD-5 fuze) (APHEBC)";
+		displayName = "BR-350A (APHEBC)";
 		displayNameShort = "APHEBC";
 	};
 	class JPSP_10x_BR350A_AP: JPSP_BR350A_AP
