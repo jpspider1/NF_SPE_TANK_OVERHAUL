@@ -8,7 +8,9 @@ class CfgPatches
         vehicles[] = {};
 		weapons[] = {"JPSP_NF_76mm_F34","JPSP_NF_76mm_L10","JPSP_NF_85mm_ZiSS53","JPSP_NF_76mm_F32","JPSP_NF_76mm_ZiS5","JPSP_NF_45mm"};
 		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_OF350M_HE","JPSP_10x_OF350M_HE",
-			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT"};
+			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT",
+			"JPSP_BR365_APHEBC","JPSP_10x_BR365_APHEBC","JPSP_BR365K_APHE","JPSP_10x_BR365K_APHE","JPSP_BR365P_APCR","JPSP_10x_BR365P_APCR","JPSP_O365K_HE","JPSP_10x_O365K_HE"
+		};
 		requiredVersion = 1;
 		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","NORTH_vehicles_cfg","NORTH_weapons_cfg"};
 		ammo[] = {};
@@ -1339,8 +1341,8 @@ class CfgVehicles
 				//magazines[] = {"SPE_18x_76mm_M7_M62_APCBC","SPE_8x_76mm_M7_M93_APCR","SPE_20x_76mm_M7_M42_HE","SPE_8x_76mm_M7_M89_SMK"};
 				//weapons[] = {"SPE_M7_76mm_L55"};
 				weapons[] = {"JPSP_NF_85mm_ZiSS53","NORTH_DT_01","SmokeLauncher"};
-				magazines[] = {"SPE_40x_76mm_M7_M62_APCBC","SPE_10x_76mm_M7_M93_APCR","SPE_50x_76mm_M7_M42_HE",
-				"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","SmokeLauncherMag"};
+				magazines[] = {"JPSP_10x_BR365_APHEBC","JPSP_10x_BR365_APHEBC","JPSP_10x_BR365K_APHE","JPSP_10x_BR365P_APCR","JPSP_10x_O365K_HE","JPSP_10x_O365K_HE"
+				,"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","SmokeLauncherMag"};
 			};
 		};
 		class AnimationSources: AnimationSources
@@ -1555,7 +1557,7 @@ class CfgVehicles
 				};
 
 				weapons[] = {"JPSP_NF_85mm_ZiSS53","NORTH_DT_01"};
-				magazines[] = {"SPE_40x_76mm_M7_M62_APCBC","SPE_10x_76mm_M7_M93_APCR","SPE_50x_76mm_M7_M42_HE",
+				magazines[] = {"JPSP_10x_BR365_APHEBC","JPSP_10x_BR365_APHEBC","JPSP_10x_BR365K_APHE","JPSP_10x_BR365P_APCR","JPSP_10x_O365K_HE","JPSP_10x_O365K_HE"
 				,"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
 			};
 		};
@@ -2634,9 +2636,30 @@ class CfgWeapons
 	class JPSP_NF_85mm_ZiSS53: SPE_M7_76mm_L55
 	{
 		displayName = "85mm ZiS-S-53";
+		class MODE_AI_APCR: SPE_M7_76mm_APCR_AI
+		{
+		displayName = "85mm ZiS-S-53";
+			magazines[] = {"JPSP_BR365P_APCR","JPSP_10x_BR365P_APCR"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_HE: SPE_M7_76mm_HE_AI
+		{
+		displayName = "85mm ZiS-S-53";
+			magazines[] = {"JPSP_O365K_HE","JPSP_10x_O365K_HE"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_SMOKE: SPE_M7_76mm_SMK_AI
+		{
+			displayName = "85mm ZiS-S-53";
+			magazines[] = {""};
+			magazineWell[] = {""};
+		};
 		class MODE_PLAYER_ALL: SPE_M7_76mm_base
         {
             displayName = "85mm ZiS-S-53";
+			magazines[] = {"JPSP_BR365_APHEBC","JPSP_10x_BR365_APHEBC","JPSP_BR365K_APHE","JPSP_10x_BR365K_APHE","JPSP_BR365P_APCR","JPSP_10x_BR365P_APCR",
+				"JPSP_O365K_HE","JPSP_10x_O365K_HE"};
+			magazineWell[] = {""};
         };
 	};
 	//T-26 and BT series
@@ -2730,5 +2753,47 @@ class cfgMagazines
 		count = 10;
 	};
 	////////// T-34-85 //////////
+	class SPE_76mm_M7_M93_APCR;
+	class JPSP_BR365P_APCR: SPE_76mm_M7_M93_APCR
+	{
+		displayName = "BR-365P (APCR)";
+		displayNameShort = "APCR";
+	};
+	class JPSP_10x_BR365P_APCR: JPSP_BR365P_APCR
+	{
+		count = 10;
+	};
+	// Stronger AP
+	class SPE_76mm_M7_M62_APCBC;
+	class JPSP_BR365K_APHE: SPE_76mm_M7_M62_APCBC
+	{
+		displayName = "BR-365K (APHE)";
+		displayNameShort = "APHE";
+	};
+	class JPSP_10x_BR365K_APHE: JPSP_BR365K_APHE
+	{
+		count = 10;
+	};
+	// Weaker AP
+	class SPE_76mm_M7_M79_AP;
+	class JPSP_BR365_APHEBC: SPE_76mm_M7_M79_AP
+	{
+		displayName = "BR-365 (APHEBC)";
+		displayNameShort = "APHEBC";
+	};
+	class JPSP_10x_BR365_APHEBC: JPSP_BR365_APHEBC
+	{
+		count = 10;
+	};
+	//HE
+	class SPE_76mm_M7_M42_HE;
+	class JPSP_O365K_HE: SPE_76mm_M7_M42_HE
+	{
+		displayName = "O-365K (HE)";
+	};
+	class JPSP_10x_O365K_HE: JPSP_O365K_HE
+	{
+		count = 10;
+	};
 
 };
