@@ -2568,12 +2568,34 @@ class CfgWeapons
         };
     };
 
+	//KV-1E
     class JPSP_NF_76mm_F32: SPE_M3_L40
     {
         displayName = "76mm F-32";
+		class MODE_AI_APCR: SPE_M3_L40_APCR_AI
+		{
+			displayName = "76mm F-32";
+			magazines[] = {""};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_HE: SPE_M3_L40_HE_AI
+		{
+			displayName = "76mm F-32";
+			magazines[] = {"JPSP_OF350M_HE","JPSP_10x_OF350M_HE"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_SMOKE: SPE_M3_L40_SMK_AI
+		{
+			displayName = "76mm F-32";
+			magazines[] = {"JPSP_D350A_SMK","JPSP_10x_D350A_SMK"};
+			magazineWell[] = {""};
+		};
         class MODE_PLAYER_ALL: SPE_M3_L40_base
         {
             displayName = "76mm F-32";
+			magazines[] = {"JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel",
+				"JPSP_OF350M_HE","JPSP_10x_OF350M_HE","JPSP_D350A_SMK","JPSP_10x_D350A_SMK"};
+			magazineWell[] = {""};
         };
     };
 	class SPE_M7_76mm_base;
