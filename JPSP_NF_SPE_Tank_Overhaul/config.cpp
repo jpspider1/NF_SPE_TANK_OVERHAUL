@@ -2499,31 +2499,31 @@ class CfgVehicles
 	};
 };
 
-//Inherit
-class MODE_AI_APCR;
-class MODE_AI_HE;
-class MODE_AI_SMOKE;
 class CfgWeapons
 {
+	//Inherit
+	class SPE_M3_L40_APCR_AI;
+	class SPE_M3_L40_HE_AI;
+	class SPE_M3_L40_SMK_AI;
 	//85mm ZiS-S-53
     class SPE_M3_L40_base;
     class SPE_M3_L40;
     class JPSP_NF_76mm_F34: SPE_M3_L40
     {
         displayName = "76mm F-34";
-		class MODE_AI_APCR: MODE_AI_APCR
+		class MODE_AI_APCR: SPE_M3_L40_APCR_AI
 		{
 			displayName = "76mm F-34";
 			magazines[] = {"JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR"};
 			magazineWell[] = {""};
 		};
-		class MODE_AI_HE: MODE_AI_HE
+		class MODE_AI_HE: SPE_M3_L40_HE_AI
 		{
 			displayName = "76mm F-34";
 			magazines[] = {"JPSP_OF350M_HE","JPSP_10x_OF350M_HE"};
 			magazineWell[] = {""};
 		};
-		class MODE_AI_SMOKE: MODE_AI_SMOKE
+		class MODE_AI_SMOKE: SPE_M3_L40_SMK_AI
 		{
 			displayName = "76mm F-34";
 			magazines[] = {"JPSP_D350A_SMK","JPSP_10x_D350A_SMK"};
