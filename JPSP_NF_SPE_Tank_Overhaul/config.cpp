@@ -10,7 +10,7 @@ class CfgPatches
 		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_OF350M_HE","JPSP_10x_OF350M_HE",
 			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT"};
 		requiredVersion = 1;
-		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","NORTH_vehicles_cfg"};
+		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","NORTH_vehicles_cfg","NORTH_weapons_cfg"};
 		ammo[] = {};
 	};
 };
