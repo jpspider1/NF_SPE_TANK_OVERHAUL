@@ -2505,9 +2505,9 @@ class CfgWeapons
 	class SPE_M3_L40_APCR_AI;
 	class SPE_M3_L40_HE_AI;
 	class SPE_M3_L40_SMK_AI;
-	//85mm ZiS-S-53
     class SPE_M3_L40_base;
     class SPE_M3_L40;
+	// T-34-76 1941, T-34-76 1943
     class JPSP_NF_76mm_F34: SPE_M3_L40
     {
         displayName = "76mm F-34";
@@ -2537,7 +2537,7 @@ class CfgWeapons
 			magazineWell[] = {""};
         };
     };
-
+	// KV-1 1942, KV-1 1941
 	class JPSP_NF_76mm_ZiS5: SPE_M3_L40
 	{
 		displayName = "76mm ZiS-5";
@@ -2628,6 +2628,7 @@ class CfgWeapons
 			magazineWell[] = {""};
         };
     };
+	// T-34-85
 	class SPE_M7_76mm_base;
 	class SPE_M7_76mm_L55;
 	class JPSP_NF_85mm_ZiSS53: SPE_M7_76mm_L55
@@ -2638,6 +2639,7 @@ class CfgWeapons
             displayName = "85mm ZiS-S-53";
         };
 	};
+	//T-26 and BT series
 	class SPE_M6_L53_base;
 	class SPE_M6_L53;
 	class JPSP_NF_45mm: SPE_M6_L53
