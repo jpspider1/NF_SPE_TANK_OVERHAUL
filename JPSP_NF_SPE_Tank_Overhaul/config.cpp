@@ -7,7 +7,8 @@ class CfgPatches
 		units[] = {};
         vehicles[] = {};
 		weapons[] = {"JPSP_NF_76mm_F34","JPSP_NF_85mm_ZiSS53","JPSP_NF_76mm_F32","JPSP_NF_76mm_ZiS5","JPSP_NF_45mm"};
-		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel"}
+		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_OF350M_HE","JPSP_10x_OF350M_HE",
+			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK"}
 		requiredVersion = 1;
 		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","NORTH_vehicles_cfg"};
 		ammo[] = {};
@@ -2552,6 +2553,7 @@ class CfgWeapons
 
 class cfgMagazines
 {
+	// Shrapnel
 	class SPE_Shell_37L57_M2_Canister;
 	class JPSP_Shell_Sh354T_Shrapnel: SPE_Shell_37L57_M2_Canister
 	{
@@ -2559,6 +2561,45 @@ class cfgMagazines
 		displayNameShort = "Shrapnel";
 	};
 	class JPSP_10x_Shell_Sh354T_Shrapnel: JPSP_Shell_Sh354T_Shrapnel
+	{
+		count = 10;
+	};
+	// Stronger AP
+	class SPE_M61_M1_AP;
+	class JPSP_BR350SP_AP: SPE_M61_M1_AP
+	{
+		displayName = "BR-350SP (APBC)";
+		displayNameShort = "APBC-T";
+	};
+	class JPSP_10x_BR350SP_AP: JPSP_BR350SP_AP
+	{
+		count = 10;
+	};
+	//Weaker AP
+	class SPE_M72_AP;
+	class JPSP_BR350A_AP: SPE_M72_AP
+	{
+		displayName = "BR-350A (MD-5 fuze) (APHEBC)";
+		displayNameShort = "APHEBC";
+	};
+	
+	//HE
+	class SPE_M48_HE;
+	class JPSP_OF350M_HE: SPE_M48_HE
+	{
+		displayName = "OF-350M (HE)";
+	};
+	class JPSP_10x_OF350M_HE: JPSP_OF350M_HE
+	{
+		count = 10;
+	};
+	//Smoke
+	class SPE_M89_SMK;
+	class JPSP_D350A_SMK: SPE_M89_SMK
+	{
+		displayName = "D-350A (SMK)";
+	};
+	class JPSP_10x_D350A_SMK: JPSP_D350A_SMK
 	{
 		count = 10;
 	};
