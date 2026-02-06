@@ -8,7 +8,7 @@ class CfgPatches
         vehicles[] = {};
 		weapons[] = {"JPSP_NF_76mm_F34","JPSP_NF_85mm_ZiSS53","JPSP_NF_76mm_F32","JPSP_NF_76mm_ZiS5","JPSP_NF_45mm"};
 		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_OF350M_HE","JPSP_10x_OF350M_HE",
-			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT"}
+			"JPSP_D350A_SMK", "JPSP_10x_D350A_SMK","JPSP_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR","JPSP_BP353A_HEAT","JPSP_10x_BP353A_HEAT"};
 		requiredVersion = 1;
 		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","NORTH_vehicles_cfg"};
 		ammo[] = {};
@@ -2500,6 +2500,10 @@ class CfgVehicles
 };
 class CfgWeapons
 {
+	//Inherit
+	class MODE_AI_APCR;
+	class MODE_AI_HE;
+	class MODE_AI_SMOKE;
 	//85mm ZiS-S-53
     class SPE_M3_L40_base;
     class SPE_M3_L40;
