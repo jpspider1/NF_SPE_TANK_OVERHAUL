@@ -906,7 +906,7 @@ class CfgVehicles
 				};
 
 				weapons[] = {"JPSP_NF_76mm_F34","NORTH_DT_01"};
-				magazines[] = {"SPE_50x_M61_M1_AP","SPE_50x_M48_HE",
+				magazines[] = {"JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_10x_OF350M_HE","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_10x_D350A_SMK",
 				"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
 			};
 		};
@@ -1122,7 +1122,7 @@ class CfgVehicles
 				};
 
 				weapons[] = {"JPSP_NF_76mm_F34","NORTH_DT_01"};
-				magazines[] = {"SPE_50x_M61_M1_AP","SPE_50x_M48_HE",
+				magazines[] = {"JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350SP_AP","JPSP_10x_BR350SP_AP","JPSP_10x_BR354P_APCR","JPSP_10x_BP353A_HEAT","JPSP_10x_OF350M_HE","JPSP_10x_Shell_Sh354T_Shrapnel", "JPSP_10x_D350A_SMK",
 				"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
 			};
 		};
@@ -2506,6 +2506,24 @@ class CfgWeapons
     class JPSP_NF_76mm_F34: SPE_M3_L40
     {
         displayName = "76mm F-34";
+		class MODE_AI_APCR: MODE_AI_APCR
+		{
+			displayName = "76mm F-34";
+			magazines[] = {"JPSP_BR354P_APCR","JPSP_10x_BR354P_APCR"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_HE: MODE_AI_HE
+		{
+			displayName = "76mm F-34";
+			magazines[] = {"JPSP_OF350M_HE","JPSP_10x_OF350M_HE"};
+			magazineWell[] = {""};
+		};
+		class MODE_AI_SMOKE: MODE_AI_SMOKE
+		{
+			displayName = "76mm F-34";
+			magazines[] = {"JPSP_D350A_SMK","JPSP_10x_D350A_SMK"};
+			magazineWell[] = {""};
+		};
         class MODE_PLAYER_ALL: SPE_M3_L40_base
         {
             displayName = "76mm F-34";
