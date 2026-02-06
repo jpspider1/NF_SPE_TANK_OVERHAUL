@@ -83,3 +83,16 @@ Soviet T-34-76 1943
 - 10x OF-350M (HE)
 - 10x Sh-354T (Shrapnel)
 - 10x D-350A (SMK)
+
+Soviet T-34-85 1944 and 1945
+- Custom 85mm ZiS S 53 gun given renamed shells and new magazines
+- New magazine 76mm M7 M93 APCR to BR-365P (APCR)
+- New magazine 76mm M7 M62 APCBC to BR-365K (APHE)
+- New magazine 76mm M7 M79 AP to BR-365 (APHEBC)
+- New magazine 76mm M7 M42 HE to O-365K (HE)
+
+Soviet T-34-85 1944 and 1945
+- 20x BR-365 (APHEBC)
+- 10x BR-365K (APHE)
+- 10x BR-365P (APCR)
+- 20x O-365K (HE)
