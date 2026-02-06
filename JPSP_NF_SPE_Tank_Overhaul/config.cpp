@@ -2675,7 +2675,7 @@ class CfgWeapons
 	class JPSP_NF_45mm: SPE_M6_L53
 	{
 		displayName = "45 mm 20K Obr. 1932-34";
-		class MODE_AI_HE: MODE_AI_HE
+		class MODE_AI_HE: SPE_M6_L53_HE_AI
 		{
             displayName = "45 mm 20K Obr. 1932-34";
 			magazines[] = {"JPSP_BR240_APHEBC", "JPSP_10x_BR240_APHEBC", "JPSP_BR240SP_APBC", "JPSP_10x_BR240SP_APBC"};
