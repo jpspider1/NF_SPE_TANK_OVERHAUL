@@ -2672,6 +2672,7 @@ class CfgWeapons
 	//T-26 and BT series
 	class SPE_M6_L53_base;
 	class SPE_M6_L53;
+	class SPE_M6_L53_HE_AI;
 	class JPSP_NF_45mm: SPE_M6_L53
 	{
 		displayName = "45 mm 20K Obr. 1932-34";
