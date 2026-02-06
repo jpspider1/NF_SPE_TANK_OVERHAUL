@@ -2537,7 +2537,7 @@ class CfgWeapons
 			magazineWell[] = {""};
         };
     };
-
+	//T-28
 	class JPSP_NF_76mm_L10: SPE_M3_L40
     {
         displayName = "76mm L-10";
