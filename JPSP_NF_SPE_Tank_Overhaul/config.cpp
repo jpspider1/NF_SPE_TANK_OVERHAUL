@@ -1773,7 +1773,7 @@ class CfgVehicles
 				};
 
 				weapons[] = {"JPSP_NF_76mm_F32","NORTH_DT_01"};
-				magazines[] = {"SPE_50x_M61_M1_AP","SPE_50x_M48_HE",
+				magazines[] = {"JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_BR350A_AP","JPSP_10x_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel","JPSP_10x_OF350M_HE","JPSP_10x_OF350M_HE","JPSP_10x_D350A_SMK","JPSP_10x_D350A_SMK",
 				"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
 			};
 		};
