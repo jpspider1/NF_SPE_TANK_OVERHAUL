@@ -96,3 +96,6 @@ Soviet T-34-85 1944 and 1945
 - 10x BR-365K (APHE)
 - 10x BR-365P (APCR)
 - 20x O-365K (HE)
+
+Soviet T-70, T-26, and BT series
+- Custom 45mm 20K Obr. 1932-34 given renamed shells and new magazines

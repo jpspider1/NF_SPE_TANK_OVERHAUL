@@ -2826,7 +2826,7 @@ class cfgMagazines
 	class SPE_Shell_37L57_M51_APC;
 	class JPSP_BR240SP_APBC: SPE_Shell_37L57_M51_APC
 	{
-		displayName = "BR-240SP(APBC)";
+		displayName = "BR-240SP (APBC)";
 		displayNameShort = "APBC";
 	};
 	class JPSP_10x_BR240SP_APBC: JPSP_BR240SP_APBC
