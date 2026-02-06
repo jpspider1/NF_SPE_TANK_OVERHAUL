@@ -7,6 +7,7 @@ class CfgPatches
 		units[] = {};
         vehicles[] = {};
 		weapons[] = {"JPSP_NF_76mm_F34","JPSP_NF_85mm_ZiSS53","JPSP_NF_76mm_F32","JPSP_NF_76mm_ZiS5","JPSP_NF_45mm"};
+		magazines[] = {"JPSP_Shell_Sh354T_Shrapnel","JPSP_10x_Shell_Sh354T_Shrapnel"}
 		requiredVersion = 1;
 		requiredAddons[] = {"A3_UI_F","a3_map_altis_scenes","a3_map_vr_scenes","a3_map_stratis_scenes","A3_Map_Stratis","A3_Data_F_Enoch_Loadorder","NORTH_vehicles_cfg"};
 		ammo[] = {};
@@ -2546,5 +2547,19 @@ class CfgWeapons
         {
             displayName = "45 mm 20K Obr. 1932-34";
         };
+	};
+};
+
+class cfgMagazines
+{
+	class SPE_Shell_37L57_M2_Canister;
+	class JPSP_Shell_Sh354T_Shrapnel: SPE_Shell_37L57_M2_Canister
+	{
+		displayName = "Sh-354T (Shrapnel)";
+		displayNameShort = "Shrapnel";
+	};
+	class JPSP_10x_Shell_Sh354T_Shrapnel: JPSP_Shell_Sh354T_Shrapnel
+	{
+		count = 10;
 	};
 };
