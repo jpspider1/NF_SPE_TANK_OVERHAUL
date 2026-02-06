@@ -2281,6 +2281,220 @@ class CfgVehicles
 			};
 		};
 	};
+
+	class NORTH_FIN_T26_M38: NORTH_Tank_Base
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				// SPE Components
+				class Components
+				{
+					class VehicleSystemsTemplateLeftGunner;
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "EmptyDisplay";
+						forcedDisplay = "EmptyDisplay";
+						left = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_X"",	(safezoneX + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+
+					class VehicleSystemsTemplateRightGunner;
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "AmmoDisplay";
+						forcedDisplay = "AmmoDisplay";
+						right = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_X"",	((safezoneX + safezoneW) - (		(10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)) + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+				};
+				
+				weapons[] = {"JPSP_NF_45mm","NORTH_DT_01"};
+				magazines[] = {"SPE_50x_Shell_37L57_M51_APC","SPE_50x_Shell_37L57_M51_APC","SPE_50x_Shell_37L57_M63_HE",
+					"NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag","NORTH_47rnd_dt_mag"};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class muzzle_rot_cannon
+			{
+				source = "ammorandom";
+				weapon = "JPSP_NF_45mm";
+			};
+			class recoil_source
+			{
+				source = "reload";
+				weapon = "JPSP_NF_45mm";
+			};
+		};
+		class EventHandlers
+		{
+			class SPE_AntiFlip
+			{
+				EpeContact = "_this call SPE_AntiFlip_fnc_epeEH";
+				EpeContactEnd = "_this call SPE_AntiFlip_fnc_epeEH";
+				EpeContactStart = "_this call SPE_AntiFlip_fnc_epeEH";
+				init = "_this call SPE_AntiFlip_fnc_vehicleInit";
+			};
+			class SPE_DestructionEffects_Fix
+			{
+				engine = "_this call SPE_Fnc_engineCheckDamage";
+			};
+			class SPE_sound_tankHitPartInteriorEventhandler
+			{
+				hitPart = "_this call SPE_soundFunction_interiorHit";
+			};
+			class SPE_System_Tanks_Damage
+			{
+				getOut = "_this call SPE_Fnc_System_Tanks_getOutEH";
+				init = "_this call SPE_Fnc_System_Tanks_initEH";
+				killed = "_this call SPE_Fnc_System_Tanks_killed_EH";
+			};
+			class SPE_Tanks
+			{
+				init = "_this call SPE_System_Tanks_EH_Tank_init";
+			};
+			class SPE_VehicleTypeCaching
+			{
+				init = "(_this select 0) setVariable ['SPE_isTank',true];";
+			};
+		};
+
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				armor = 1; //1
+				radius = 0.16;
+				material = -1;
+				name = "firegeo_hull";
+				visual = "damage_hull";
+				passThrough = 1; //1
+				minimalHit = 0.14; //0.4
+				explosionShielding = 0.35; //SPE
+			};
+			class HitLTrack: HitLTrack
+			{
+				armor = 1;
+				radius = 0.18;
+				material = -1;
+				name = "firegeo_track_L";
+				visual = "firegeo_track_L";
+				passThrough = 0;
+				minimalHit = 0.07; //0.02
+				
+			};
+			class HitRTrack: HitRTrack
+			{
+				armor = 1;
+				radius = 0.18;
+				material = -1;
+				name = "firegeo_track_R";
+				visual = "firegeo_track_R";
+				passThrough = 0;
+				minimalHit = 0.07; //0.02
+				
+			};
+			class HitEngine: HitEngine
+			{
+				armor = 0.4; //1.5
+				radius = 0.14;
+				material = -1;
+				name = "firegeo_engine";
+				visual = "firegeo_engine";
+				passThrough = 1; //0
+				minimalHit = 0.14; //0.3
+				explosionShielding = 0.4; //SPE
+				
+				//SPE
+                class DestructEffects
+                {
+                    ammoExplosionEffect = "";
+					class SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "particles";
+                        type = "SmallWreckSmoke";
+                    };
+                    class SPE_Engine_Fire: SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "particles";
+                        type = "SmallFireFPlace";
+                    };
+                    class SPE_Engine_Sounds: SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "sound";
+                        type = "Fire";
+                    };
+                    class SPE_Engine_Sparks: SPE_Engine_Smoke
+                    {
+                        intensity = 0.5;
+                        interval = 1;
+                        lifeTime = 60;
+                        position = "engine_smoke";
+                        simulation = "particles";
+                        type = "FireSparks";
+                    };
+                };
+			};
+		};
+	};
 };
 class CfgWeapons
 {
