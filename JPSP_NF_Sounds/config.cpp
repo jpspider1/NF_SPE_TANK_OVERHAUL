@@ -7,7 +7,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"WW2_Assets_c_Vehicles_vehicleSounds_c","WW2_Core_c_WW2_TankEngineSoundsRevert_c","NORTH_vehicles_cfg"};
+		requiredAddons[] = {"NORTH_vehicles_cfg"};
 	};
 };
 class CfgSoundShaders
