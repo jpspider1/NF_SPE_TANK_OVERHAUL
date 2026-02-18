@@ -39,13 +39,79 @@ class CfgVehicles
 	};
 	class NORTH_staticCannon: StaticCannon{};
 	//Inherit end
-	
+
 	class NORTH_45pstk37: NORTH_staticCannon
 	{
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
+				// SPE Components
+				class Components
+				{
+					class VehicleSystemsTemplateLeftGunner;
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "EmptyDisplay";
+						forcedDisplay = "EmptyDisplay";
+						left = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_X"",	(safezoneX + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+
+					class VehicleSystemsTemplateRightGunner;
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "AmmoDisplay";
+						forcedDisplay = "AmmoDisplay";
+						right = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_X"",	((safezoneX + safezoneW) - (		(10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)) + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+				};
+
 				weapons[] = {"JPSP_NF_45mm_static"};
 				magazines[] = {"JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC","JPSP_10x_BR240_APHEBC",
 					"JPSP_10x_BR240SP_APBC","JPSP_10x_BR240SP_APBC",
