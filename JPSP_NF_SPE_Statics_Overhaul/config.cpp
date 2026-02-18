@@ -210,6 +210,89 @@ class CfgVehicles
 		};
 
 	};
+
+	//76mm obr 1936 field gun
+	class NORTH_76k36: NORTH_staticCannon
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				// SPE Components
+				class Components
+				{
+					class VehicleSystemsTemplateLeftGunner;
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "EmptyDisplay";
+						forcedDisplay = "EmptyDisplay";
+						left = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_X"",	(safezoneX + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFOLEFT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+
+					class VehicleSystemsTemplateRightGunner;
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						componentType = "VehicleSystemsDisplayManager";
+						defaultDisplay = "AmmoDisplay";
+						forcedDisplay = "AmmoDisplay";
+						right = 1;
+						x = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_X"",	((safezoneX + safezoneW) - (		(10 * 			(			((safezoneW / safezoneH) min 1.2) / 40)) + 0.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)))])";
+						y = "(profilenamespace getvariable [""IGUI_GRID_CUSTOMINFORIGHT_Y"",	(safezoneY + safezoneH - 21 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25))])";
+						class Components
+						{
+							class AmmoDisplay
+							{
+								componentType = "CustomDisplayComponent";
+								resource = "SPE_RscVehicleAmmoStatus";
+							};
+							class CrewDisplay
+							{
+								componentType = "CrewDisplayComponent";
+							};
+							class EmptyDisplay
+							{
+								componentType = "EmptyDisplayComponent";
+							};
+							class MinimapDisplay
+							{
+								componentType = "MinimapDisplayComponent";
+							};
+						};
+					};
+				};
+
+				weapons[] = {"JPSP_NF_76mm_1927"};
+				magazines[] = {"JPSP_10x_Shell_UBR354P_APCR",
+					"JPSP_10x_Shell_UOF353_HE","JPSP_10x_Shell_UOF353_HE","JPSP_10x_Shell_UOF353_HE","JPSP_10x_Shell_UOF353_HE",
+					"JPSP_10x_Shell_USh354G_Shrapnel"
+				};
+			};
+		};
+
+	};
 };
 
 class CfgWeapons
