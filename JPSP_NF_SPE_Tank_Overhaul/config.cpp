@@ -2071,8 +2071,8 @@ class CfgVehicles
 	
 	class NORTH_SOV_T70: NORTH_Tank_Base
 	{		
-		armor = 450; //420
-		armorStructural = 50; //8
+		armor = 200; //420 //was 450 now 200. 100 poionts higher than SPE M8 greyhound
+		armorStructural = 12; //8 //was 50 like tanks now 24. Double over the SPE M8 greyhound
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
