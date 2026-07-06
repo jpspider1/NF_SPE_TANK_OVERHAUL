@@ -2986,6 +2986,13 @@ class CfgVehicles
 	
 	class NORTH_FIN_BA10: NORTH_Truck_base
 	{
+		
+		soundEngineOnInt[] = {"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Engine_Interior_StartUp.ogg",0.63095737,1.0};
+		soundEngineOnExt[] = {"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Engine_Exterior_StartUp.ogg",0.7943282,1.0,200};
+
+		soundEngineOffInt[] = {"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Engine_Interior_Shutdown.ogg",0.63095737,1.0};
+		soundEngineOffExt[] = {"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Engine_Exterior_Shutdown.ogg",0.7943282,1.0,200};
+
 		class Sounds
 		{
 			soundSetsExt[] = {
