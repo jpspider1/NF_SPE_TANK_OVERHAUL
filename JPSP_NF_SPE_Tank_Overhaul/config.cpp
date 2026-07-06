@@ -842,6 +842,32 @@ class CfgVehicles
 			class MainTurret: MainTurret
 			{
 
+				class HitPoints: HitPoints
+				{
+					class HitTurret: HitTurret
+					{
+						armor = 0.4; //1
+						material = -1;
+						name = "firegeo_turret";
+						visual = "damage_turret";
+						passThrough = 0;
+						minimalHit = -0.21; //0.4
+						radius = 0.1;
+						explosionShielding = 0.4; //Added
+					};
+					class HitGun: HitGun
+					{
+						armor = 0.8; //1
+						material = -1;
+						name = "firegeo_gun";
+						visual = "damage_gun";
+						passThrough = 0;
+						minimalHit = -0.04; //0.4
+						radius = 0.05;
+						explosionShielding = 0.2; //Added
+					};
+				};
+
 				// SPE Components
 				class Components
 				{
