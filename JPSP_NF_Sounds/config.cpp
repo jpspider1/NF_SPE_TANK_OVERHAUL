@@ -7,7 +7,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"NORTH_vehicles_cfg","WW2_SPE_Assets_c_Vehicles_SoundFrameWork_c"};
+		requiredAddons[] = {"NORTH_vehicles_cfg","WW2_SPE_Assets_c_Vehicles_SoundFrameWork_c","NORTH_transport_cfg"};
 	};
 };
 class CfgSoundShaders
@@ -2771,6 +2771,8 @@ class CfgSoundSets
 class CfgVehicles
 {
 	class NORTH_Tank_Base;
+	class NORTH_Truck_base;
+
 	class NORTH_FIN_T34_76_1941: NORTH_Tank_Base
 	{
 		class Sounds
@@ -2981,5 +2983,45 @@ class CfgVehicles
 				"MBT_02_Tracks_01_EXT_SoundSet","MBT_02_Tracks_02_EXT_SoundSet","MBT_02_Tracks_03_EXT_SoundSet","MBT_02_Tracks_04_EXT_SoundSet","MBT_02_Tracks_05_EXT_SoundSet","MBT_02_Tracks_06_EXT_SoundSet","MBT_02_Rain_EXT_SoundSet","MBT_02_Tracks_Brake_Hard_EXT_SoundSet","MBT_02_Tracks_Brake_Soft_EXT_SoundSet","MBT_02_Tracks_Turn_Hard_EXT_SoundSet","MBT_02_Tracks_Turn_Soft_EXT_SoundSet","MBT_02_Drive_Water_EXT_SoundSet","Tracks_Movement_Dirt_Ext_01_SoundSet","Tracks_Surface_Soft_Ext_SoundSet","Tracks_Surface_Hard_Ext_SoundSet","Tracks_Surface_Sand_Ext_SoundSet","Tracks_Surface_Squeaks_Soft_Ext_SoundSet","Tracks_Surface_Squeaks_Hard_Ext_SoundSet"};
 		};
 	};
-		
+	
+	class NORTH_FIN_BA10: NORTH_Truck_base
+	{
+		class Sounds
+		{
+			soundSetsExt[] = {
+				"BA10_Engine_RMP0_EXT_SoundSet",
+				"BA10_Engine_RMP1_EXT_SoundSet",
+				"BA10_Engine_RMP2_EXT_SoundSet",
+				"BA10_Engine_RMP3_EXT_SoundSet",
+				"BA10_Engine_RMP4_EXT_SoundSet",
+				"BA10_Engine_RMP5_EXT_SoundSet",
+				"BA10_Engine_RMP6_EXT_SoundSet",
+				"BA10_Exhaust_1_EXT_SoundSet",
+				"BA10_Exhaust_2_EXT_SoundSet",
+				"BA10_Exhaust_3_EXT_SoundSet",
+				"BA10_Exhaust_4_EXT_SoundSet",
+				"BA10_Exhaust_5_EXT_SoundSet",
+				"BA10_Exhaust_6_EXT_SoundSet",
+				"BA10_Exhaust_7_EXT_SoundSet",
+				"Van_01_Rattling_EXT_SoundSet","Van_01_Stress_EXT_SoundSet","SPE_truck_ext_tires_rock_slow_SoundSet","SPE_truck_ext_tires_rock_fast_SoundSet","SPE_truck_ext_tires_grass_slow_SoundSet","SPE_truck_ext_tires_grass_fast_SoundSet","SPE_truck_ext_tires_sand_slow_SoundSet","SPE_truck_ext_tires_sand_fast_SoundSet","SPE_truck_ext_tires_gravel_slow_SoundSet","SPE_truck_ext_tires_gravel_fast_SoundSet","SPE_truck_ext_tires_mud_slow_SoundSet","SPE_truck_ext_tires_mud_fast_SoundSet","SPE_truck_ext_tires_asphalt_slow_SoundSet","SPE_truck_ext_tires_asphalt_fast_SoundSet","SPE_truck_ext_tires_water_slow_SoundSet","SPE_truck_ext_tires_water_fast_SoundSet","Van_01_Tires_Turn_Hard_EXT_SoundSet","Van_01_Tires_Turn_Soft_EXT_SoundSet","Van_01_Tires_Brake_Hard_EXT_SoundSet","Van_01_Tires_Brake_Soft_EXT_SoundSet","SPE_car_Ext_rain_light_soundSet","SPE_car_Ext_rain_hard_soundSet","SPE_truck_ext_rattling_offroad_low_soundSet","SPE_truck_ext_rattling_offroad_high_soundSet","SPE_truck_ext_distantTires_soundSet","SPE_truck_ext_distantTires_wet_soundSet","SPE_truck_ext_tires_wetLayer_soundSet","SPE_truck_ext_suspension_soundSet","SPE_tank_ext_internalFire_soundSet"
+			};
+			soundSetsInt[] = {
+				"BA10_Engine_RMP0_INT_SoundSet",
+				"BA10_Engine_RMP1_INT_SoundSet",
+				"BA10_Engine_RMP2_INT_SoundSet",
+				"BA10_Engine_RMP3_INT_SoundSet",
+				"BA10_Engine_RMP4_INT_SoundSet",
+				"BA10_Engine_RMP5_INT_SoundSet",
+				"BA10_Engine_RMP6_INT_SoundSet",
+				"BA10_Exhaust_1_INT_SoundSet",
+				"BA10_Exhaust_2_INT_SoundSet",
+				"BA10_Exhaust_3_INT_SoundSet",
+				"BA10_Exhaust_4_INT_SoundSet",
+				"BA10_Exhaust_5_INT_SoundSet",
+				"BA10_Exhaust_6_INT_SoundSet",
+				"BA10_Exhaust_7_INT_SoundSet",
+				"SPE_int_vehicleStrain_truckInterior_soundSet","Van_01_Rattling_INT_SoundSet","Van_01_Stress_INT_SoundSet","SPE_truck_int_tires_rock_slow_SoundSet","SPE_truck_int_tires_rock_fast_SoundSet","SPE_truck_int_tires_grass_slow_SoundSet","SPE_truck_int_tires_grass_fast_SoundSet","SPE_truck_int_tires_sand_slow_SoundSet","SPE_truck_int_tires_sand_fast_SoundSet","SPE_truck_int_tires_gravel_slow_SoundSet","SPE_truck_int_tires_gravel_fast_SoundSet","SPE_truck_int_tires_mud_slow_SoundSet","SPE_truck_int_tires_mud_fast_SoundSet","SPE_truck_int_tires_asphalt_slow_SoundSet","SPE_truck_int_tires_asphalt_fast_SoundSet","SPE_truck_int_tires_water_slow_SoundSet","SPE_truck_int_tires_water_fast_SoundSet","Van_01_Tires_Turn_Hard_INT_SoundSet","Van_01_Tires_Turn_Soft_INT_SoundSet","Van_01_Tires_Brake_Hard_INT_SoundSet","SPE_truck_int_tires_brake_soft_soundSet","SPE_car_Int_rain_light_soundSet","SPE_car_Int_rain_hard_soundSet","SPE_truck_int_rattling_offroad_low_soundSet","SPE_truck_int_rattling_offroad_high_soundSet","SPE_truck_int_suspension_soundSet","SPE_tank_int_internalFire_soundSet"
+			};
+		};
+	};
 };
