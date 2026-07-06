@@ -22,14 +22,13 @@ class CfgAmmo
 	
 	class SPE_G_PZGR_30_penetrator: SPE_ammo_HEAT_penetrator
 	{
-		caliber = "(50 /((15 * 1000)/1000))"; 
-		MACRO_CALIBER(50,1000) //50mm 1000m/s
-		hit = 95; //190
+		MACRO_CALIBER(30,1000) //50mm 1000m/s
+		hit = 60; //190
 	};
 
 	class SPE_G_PZGR_40_penetrator: SPE_ammo_HEAT_penetrator
 	{
-		MACRO_CALIBER(50,1000) //80mm 1000m/s
-		hit = 105;
+		MACRO_CALIBER(70,1000) //80mm 1000m/s
+		hit = 70; //210
 	};
 };
