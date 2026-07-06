@@ -2416,12 +2416,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
