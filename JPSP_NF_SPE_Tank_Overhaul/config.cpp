@@ -165,22 +165,22 @@ class CfgVehicles
 			};
 			class HitLTrack: HitLTrack
 			{
-				armor = 0.5;
+				armor = 1; //0.5
 				material = -1;
 				name = "pas_L";
 				passThrough = 0;
-				minimalHit = 0.15;
-				explosionShielding = 0.4;
+				minimalHit = 0.07; //0.15
+				explosionShielding = 3; //0.4
 				radius = 0.178;
 			};
 			class HitRTrack: HitRTrack
 			{
-				armor = 0.5;
+				armor = 1; //0.5
 				material = -1;
 				name = "pas_P";
 				passThrough = 0;
-				minimalHit = 0.15;
-				explosionShielding = 0.4;
+				minimalHit = 0.07; //0.15
+				explosionShielding = 3; //0.4
 				radius = 0.178;
 			};
 			class HitEngine: HitEngine
@@ -981,7 +981,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -992,7 +992,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitEngine: HitEngine
 			{
@@ -1196,7 +1196,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1207,7 +1207,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitEngine: HitEngine
 			{
@@ -1413,7 +1413,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1424,7 +1424,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitEngine: HitEngine
 			{
@@ -1629,7 +1629,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1640,7 +1640,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitEngine: HitEngine
 			{
@@ -1815,7 +1815,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -1826,7 +1826,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitEngine: HitEngine
 			{
@@ -2000,7 +2000,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added			
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -2010,8 +2010,8 @@ class CfgVehicles
 				name = "firegeo_track_R";
 				visual = "firegeo_track_R";
 				passThrough = 0;
-				minimalHit = 0.07; //0.02
-				
+				minimalHit = 0.07; //0.02	
+				explosionShielding = 3; //Added	
 			};
 			class HitEngine: HitEngine
 			{
@@ -2218,7 +2218,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -2229,7 +2229,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitEngine: HitEngine
 			{
@@ -2434,7 +2434,7 @@ class CfgVehicles
 				visual = "firegeo_track_L";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitRTrack: HitRTrack
 			{
@@ -2445,7 +2445,7 @@ class CfgVehicles
 				visual = "firegeo_track_R";
 				passThrough = 0;
 				minimalHit = 0.07; //0.02
-				
+				explosionShielding = 3; //Added
 			};
 			class HitEngine: HitEngine
 			{
