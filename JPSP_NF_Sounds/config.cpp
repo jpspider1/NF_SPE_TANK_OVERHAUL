@@ -1335,7 +1335,7 @@ class CfgSoundShaders
 
 	class BA10_Engine_RMP0_INT_SoundShader
 	{
-		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Engine_Interior-001.ogg2",1}};
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Engine_Interior-001.ogg",1}};
 		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - 0))";
 		volume = "engineOn * 1 * 1.3 * (rpm factor [0 *800, (0 *800 + 1 *(800-0 *800))]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(1200 - 800)/(2200 - 800) - (((1200 - 800)/(2200 - 800) - 0) - (1 * ((1200 - 800)/(2200 - 800) - 0)))/2, 0])";
 		range = 128;
@@ -3003,6 +3003,7 @@ class CfgVehicles
 				"BA10_Engine_RMP4_EXT_SoundSet",
 				"BA10_Engine_RMP5_EXT_SoundSet",
 				"BA10_Engine_RMP6_EXT_SoundSet",
+				"BA10_EngineBurst_EXT_SoundSet",
 				"BA10_Exhaust_1_EXT_SoundSet",
 				"BA10_Exhaust_2_EXT_SoundSet",
 				"BA10_Exhaust_3_EXT_SoundSet",
@@ -3020,6 +3021,7 @@ class CfgVehicles
 				"BA10_Engine_RMP4_INT_SoundSet",
 				"BA10_Engine_RMP5_INT_SoundSet",
 				"BA10_Engine_RMP6_INT_SoundSet",
+				"BA10_EngineBurst_INT_SoundSet",
 				"BA10_Exhaust_1_INT_SoundSet",
 				"BA10_Exhaust_2_INT_SoundSet",
 				"BA10_Exhaust_3_INT_SoundSet",
