@@ -154,13 +154,13 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1;
+				armor = -190; //1
 				material = -1;
 				name = "telo";
 				visual = "telo";
-				passThrough = 1;
+				passThrough = 10; //1
 				minimalHit = 0.15;
-				explosionShielding = 1.0;
+				explosionShielding = 0.35; //1
 				radius = 0.141;
 			};
 			class HitLTrack: HitLTrack
@@ -963,12 +963,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1178,12 +1178,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1395,12 +1395,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1611,12 +1611,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1797,12 +1797,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -1982,12 +1982,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
@@ -2200,12 +2200,12 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1; //1
+				armor = -190; //1
 				radius = 0.16;
 				material = -1;
 				name = "firegeo_hull";
 				visual = "damage_hull";
-				passThrough = 1; //1
+				passThrough = 10; //1
 				minimalHit = 0.14; //0.4
 				explosionShielding = 0.35; //SPE
 			};
