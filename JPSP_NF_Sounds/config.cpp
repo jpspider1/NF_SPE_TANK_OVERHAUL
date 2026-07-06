@@ -1181,6 +1181,465 @@ class CfgSoundShaders
 		samples[] = {{"JPSP_NF_Sounds\sounds\KV1\Int\IS-1_Interior_Exhaust-007.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
 	};
+
+	// BA10 //////////////////////////////////////////////////////////////////////////////////
+
+	class BA10_Engine_RMP0_EXT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Engine-001.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - 0))";
+		volume = "engineOn * 0.7 * 2 * (rpm factor [0 *800, (0 *800 + 1 *(800-0 *800))]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(1200 - 800)/(2200 - 800) - (((1200 - 800)/(2200 - 800) - 0) - (1 * ((1200 - 800)/(2200 - 800) - 0)))/2, 0])";
+		range = 400;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP1_EXT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Engine-002.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1200 - 800)/(2200 - 800)))";
+		volume = "engineOn * 0.7 * 2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[0, (1200 - 800)/(2200 - 800) - (((1200 - 800)/(2200 - 800) - 0) - (1 * ((1200 - 800)/(2200 - 800) - 0)))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(1600 - 800)/(2200 - 800) - (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2, (1200 - 800)/(2200 - 800) + (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2])";
+		range = 1000;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP2_EXT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Engine-003.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1600 - 800)/(2200 - 800)))";
+		volume = "engineOn * 0.7 * 2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1200 - 800)/(2200 - 800) + (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2, (1600 - 800)/(2200 - 800) - (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(1950 - 800)/(2200 - 800) - (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2, (1600 - 800)/(2200 - 800) + (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2])";
+		range = 1000;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP3_EXT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Engine-004.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1950 - 800)/(2200 - 800)))";
+		volume = "engineOn * 0.7 * 2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1600 - 800)/(2200 - 800) + (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) - (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 1000;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP4_EXT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Engine-005.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (2200 - 800)/(2200 - 800)))";
+		volume = "engineOn * 0.7 * 2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 1000;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+
+	class BA10_Engine_RMP5_EXT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Engine-006.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1950 - 800)/(2200 - 800)))";
+		volume = "engineOn * 0.7 * 2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1600 - 800)/(2200 - 800) + (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) - (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 1000;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP6_EXT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Engine-007.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (2200 - 800)/(2200 - 800)))";
+		volume = "engineOn * 0.7 * 2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 1000;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+
+	class BA10_Engine_RMP0_INT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Engine-001.ogg2",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - 0))";
+		volume = "engineOn * 1 * 1.3 * (rpm factor [0 *800, (0 *800 + 1 *(800-0 *800))]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(1200 - 800)/(2200 - 800) - (((1200 - 800)/(2200 - 800) - 0) - (1 * ((1200 - 800)/(2200 - 800) - 0)))/2, 0])";
+		range = 128;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+
+	
+	class BA10_Engine_RMP1_INT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Engine-002.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1200 - 800)/(2200 - 800)))";
+		volume = "engineOn * 1 * 1.3 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[0, (1200 - 800)/(2200 - 800) - (((1200 - 800)/(2200 - 800) - 0) - (1 * ((1200 - 800)/(2200 - 800) - 0)))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(1600 - 800)/(2200 - 800) - (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2, (1200 - 800)/(2200 - 800) + (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2])";
+		range = 128;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP2_INT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Engine-003.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1600 - 800)/(2200 - 800)))";
+		volume = "engineOn * 1 * 1.3 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1200 - 800)/(2200 - 800) + (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2, (1600 - 800)/(2200 - 800) - (((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800)) - (1.1 * ((1600 - 800)/(2200 - 800) - (1200 - 800)/(2200 - 800))))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(1950 - 800)/(2200 - 800) - (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2, (1600 - 800)/(2200 - 800) + (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2])";
+		range = 134;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP3_INT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Engine-004.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1950 - 800)/(2200 - 800)))";
+		volume = "engineOn * 1 * 1.3 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1600 - 800)/(2200 - 800) + (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) - (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 140;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP4_INT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Engine-005.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (2200 - 800)/(2200 - 800)))";
+		volume = "engineOn * 1 * 1.3 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 146;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+
+	class BA10_Engine_RMP5_INT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Engine-006.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (1950 - 800)/(2200 - 800)))";
+		volume = "engineOn * 1 * 1.3 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1600 - 800)/(2200 - 800) + (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) - (((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800)) - (1.2 * ((1950 - 800)/(2200 - 800) - (1600 - 800)/(2200 - 800))))/2]) * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor [(2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 140;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_Engine_RMP6_INT_SoundShader
+	{
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Engine-007.ogg",1}};
+		frequency = "1 * (1 + 1.2 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) - (2200 - 800)/(2200 - 800)))";
+		volume = "engineOn * 1 * 1.3 * (((1+0.1*1 *thrust) * ((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4]) - 0.3 * (1 - 1 *thrust)*((1-0.9  ) * (speed factor [0, 15]) + 0.9   * (rpm factor [800, 2300])) - 0.2*((abs(speed)) factor [2, 6]) + 0.2*((abs(speed)) factor [0, 4])*((abs(speed)) factor [0, 4])) + 0.5*(speed factor[0.3,0]) * ((angVelocity factor[0,0.8]) - (rpm factor [800, 2300])) factor[(1950 - 800)/(2200 - 800) + (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2, (2200 - 800)/(2200 - 800) - (((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800)) - (1.3 * ((2200 - 800)/(2200 - 800) - (1950 - 800)/(2200 - 800))))/2])";
+		range = 146;
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+
+	class BA10_EngineBurst_EXT_SoundShader
+	{
+		samples[] = {{""}};
+		frequency = 1;
+		range = 300;
+		volume = "engineOn * 0.7 * 0.7 * (rpm factor[0,10])";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	class BA10_EngineBurst_INT_SoundShader
+	{
+		samples[] = {{""}};
+		frequency = 1;
+		range = 300;
+		volume = "engineOn * 1 * 1 * (rpm factor[0,10])";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+
+	class BA10_Exhaust_1_EXT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 300;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Exhaust-001.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_2_EXT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 400;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Exhaust-002.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_3_EXT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 500;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Exhaust-003.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_4_EXT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 600;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Exhaust-004.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_5_EXT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 700;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Exhaust-005.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_6_EXT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 800;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Exhaust-006.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_7_EXT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 1000;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Ext\BA-10_Exterior_Exhaust-007.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+	
+
+	class BA10_Exhaust_1_INT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 300;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Exhaust-001.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_2_INT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 400;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Exhaust-002.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_3_INT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 500;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Exhaust-003.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_4_INT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 600;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Exhaust-004.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_5_INT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 700;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Exhaust-005.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_6_INT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 800;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Exhaust-006.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
+	class BA10_Exhaust_7_INT_SoundShader
+	{
+		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		range = 1000;
+		samples[] = {{"JPSP_NF_Sounds\sounds\BA10\Int\BA-10_Interior_Exhaust-007.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+	};
+
 };
 class Engine_Base_RPM0_EXT_SoundSet;
 class Engine_Base_RPM0_INT_SoundSet;
@@ -1958,6 +2417,351 @@ class CfgSoundSets
 		shape = "SPE_tank_exhaust_rearSemispace";
 		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
 		soundShaders[] = {"KV1_Exhaust_7_INT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	// BA10 //////////////////////////////////////////////////////////////////////////////////////
+
+	class BA10_Engine_RMP0_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP0_EXT_SoundShader"};
+		sound3DProcessingType = "VehicleExt_3DProcessingType";
+		posOffset[] = {0,0,-4};
+		volumeFactor = 1;
+	};
+	class BA10_Engine_RMP1_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP1_EXT_SoundShader"};
+		sound3DProcessingType = "VehicleExt_3DProcessingType";
+		posOffset[] = {0,0,-4};
+		volumeFactor = 1.1;
+	};
+	class BA10_Engine_RMP2_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP2_EXT_SoundShader"};
+		sound3DProcessingType = "VehicleExt_3DProcessingType";
+		posOffset[] = {0,0,-4};
+		volumeFactor = 1.2;
+	};
+	class BA10_Engine_RMP3_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP3_EXT_SoundShader"};
+		sound3DProcessingType = "VehicleExt_3DProcessingType";
+		posOffset[] = {0,0,-4};
+		volumeFactor = 1.3;
+	};
+	class BA10_Engine_RMP4_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP4_EXT_SoundShader"};
+		sound3DProcessingType = "VehicleExt_3DProcessingType";
+        posOffset[] = {0,0,-4};
+		volumeFactor = 1.4;
+	};
+	class BA10_Engine_RMP5_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP5_EXT_SoundShader"};
+		sound3DProcessingType = "VehicleExt_3DProcessingType";
+		posOffset[] = {0,0,-4};
+		volumeFactor = 1.5;
+	};
+	class BA10_Engine_RMP6_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP6_EXT_SoundShader"};
+		volumeFactor = 1.6;
+		spatial = 1;
+		loop = 1;
+	};
+
+	class BA10_EngineBurst_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
+	{
+		soundShaders[] = {"BA10_EngineBurst_EXT_SoundShader"};
+		volumeFactor = 1;
+		playTrigger = "thrust * (angVelocity factor[0.1,0]) * (speed factor[5,4.9]) - 0.1";
+		spatial = 1;
+		loop = 0;
+	};
+	class BA10_Engine_RMP0_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP0_INT_SoundShader"};
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		posOffset[] = {0,0,0};
+		volumeFactor = 1;
+	};
+	class BA10_Engine_RMP1_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP1_INT_SoundShader"};
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		posOffset[] = {0,0,0};
+		volumeFactor = 1.15;
+	};
+	class BA10_Engine_RMP2_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP2_INT_SoundShader"};
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		posOffset[] = {0,0,0};
+		volumeFactor = 1.3;
+	};
+	class BA10_Engine_RMP3_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP3_INT_SoundShader"};
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		posOffset[] = {0,0,0};
+		volumeFactor = 1.3;
+	};
+	class BA10_Engine_RMP4_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP4_INT_SoundShader"};
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		posOffset[] = {0,0,0};
+		volumeFactor = 1.3;
+	};
+
+	class BA10_Engine_RMP5_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP5_INT_SoundShader"};
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		posOffset[] = {0,0,0};
+		volumeFactor = 1.3;
+	};
+	class BA10_Engine_RMP6_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_Engine_RMP6_INT_SoundShader"};
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		posOffset[] = {0,0,0};
+		volumeFactor = 1.3;
+	};
+
+	class BA10_EngineBurst_INT_SoundSet: Engine_Base_RPM0_INT_SoundSet
+	{
+		soundShaders[] = {"BA10_EngineBurst_INT_SoundShader"};
+		volumeFactor = 1.1;
+		playTrigger = "thrust - 0.1";
+		spatial = 1;
+		loop = 0;
+	};
+
+	class BA10_Exhaust_1_EXT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_1_EXT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_2_EXT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_2_EXT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_3_EXT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_3_EXT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_4_EXT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_4_EXT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_5_EXT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_5_EXT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_6_EXT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_6_EXT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_7_EXT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_7_EXT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	
+	class BA10_Exhaust_1_INT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_1_INT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_2_INT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_2_INT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_3_INT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_3_INT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_4_INT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_4_INT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_5_INT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_5_INT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_6_INT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_6_INT_SoundShader"};
+		spatial = 1;
+		volumeCurve = "InverseSquare2Curve";
+		volumeFactor = 0.7;
+	};
+
+	class BA10_Exhaust_7_INT_SoundSet
+	{
+		distanceFilter = "SPE_defaultVehicleDistanceFilter";
+		loop = 1;
+		obstructionFactor = 0.2;
+		occlusionFactor = 0.2;
+		occlusionObstruction = 1;
+		posOffset[] = {0,-1.8,0};
+		shape = "SPE_tank_exhaust_rearSemispace";
+		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
+		soundShaders[] = {"BA10_Exhaust_7_INT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
 		volumeFactor = 0.7;
