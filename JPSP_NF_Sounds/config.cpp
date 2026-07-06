@@ -2129,5 +2129,53 @@ class CfgVehicles
 				"MBT_02_Tracks_01_EXT_SoundSet","MBT_02_Tracks_02_EXT_SoundSet","MBT_02_Tracks_03_EXT_SoundSet","MBT_02_Tracks_04_EXT_SoundSet","MBT_02_Tracks_05_EXT_SoundSet","MBT_02_Tracks_06_EXT_SoundSet","MBT_02_Rain_EXT_SoundSet","MBT_02_Tracks_Brake_Hard_EXT_SoundSet","MBT_02_Tracks_Brake_Soft_EXT_SoundSet","MBT_02_Tracks_Turn_Hard_EXT_SoundSet","MBT_02_Tracks_Turn_Soft_EXT_SoundSet","MBT_02_Drive_Water_EXT_SoundSet","Tracks_Movement_Dirt_Ext_01_SoundSet","Tracks_Surface_Soft_Ext_SoundSet","Tracks_Surface_Hard_Ext_SoundSet","Tracks_Surface_Sand_Ext_SoundSet","Tracks_Surface_Squeaks_Soft_Ext_SoundSet","Tracks_Surface_Squeaks_Hard_Ext_SoundSet"};
 		};
 	};
+
+	class NORTH_FIN_KV1_1942: NORTH_Tank_Base
+	{
+
+		soundEngineOnInt[] = {"JPSP_NF_Sounds\sounds\KV1\Int\IS-1_Internal_Exhaust_StarUp-001.ogg",0.63095737,1.0};
+		soundEngineOnExt[] = {"JPSP_NF_Sounds\sounds\KV1\Ext\IS-1_Exterior_Engine_StartUp-001.ogg",0.7943282,1.0,200};
+
+		soundEngineOffInt[] = {"JPSP_NF_Sounds\sounds\KV1\Int\IS-1_Internal_Exhaust_Shutdown-001.ogg",0.63095737,1.0};
+		soundEngineOffExt[] = {"JPSP_NF_Sounds\sounds\KV1\Ext\IS-1_Exterior_Engine_Shutdown-001.ogg",0.7943282,1.0,200};
+
+		class Sounds
+		{
+			soundSetsInt[] = {
+				"KV1_Engine_RMP0_INT_SoundSet",
+				"KV1_Engine_RMP1_INT_SoundSet",
+				"KV1_Engine_RMP2_INT_SoundSet",
+				"KV1_Engine_RMP3_INT_SoundSet",
+				"KV1_Engine_RMP4_INT_SoundSet",
+				"KV1_Engine_RMP5_INT_SoundSet",
+				"KV1_Engine_RMP6_INT_SoundSet",
+				"KV1_EngineBurst_INT_SoundSet",
+				"KV1_Exhaust_1_INT_SoundSet",
+				"KV1_Exhaust_2_INT_SoundSet",
+				"KV1_Exhaust_3_INT_SoundSet",
+				"KV1_Exhaust_4_INT_SoundSet",
+				"KV1_Exhaust_5_INT_SoundSet",
+				"KV1_Exhaust_6_INT_SoundSet",
+				"KV1_Exhaust_7_INT_SoundSet",
+				"MBT_01_Tracks_01_INT_SoundSet","MBT_01_Tracks_02_INT_SoundSet","MBT_01_Tracks_03_INT_SoundSet","MBT_01_Tracks_04_INT_SoundSet","MBT_01_Tracks_05_INT_SoundSet","MBT_01_Tracks_06_INT_SoundSet","MBT_01_Interior_Tone_Engine_Off_SoundSet","MBT_01_Interior_Tone_Engine_On_SoundSet","MBT_01_Rattling_INT_SoundSet","MBT_01_Rain_INT_SoundSet","MBT_01_Tracks_Brake_Hard_INT_SoundSet","MBT_01_Tracks_Brake_Soft_INT_SoundSet","MBT_01_Tracks_Turn_Hard_INT_SoundSet","MBT_01_Tracks_Turn_Soft_INT_SoundSet","MBT_01_Drive_Water_INT_SoundSet","Tracks_Movement_Dirt_Int_01_SoundSet","Tracks_Surface_Soft_Int_SoundSet","Tracks_Surface_Sand_Int_SoundSet","Tracks_Surface_Squeaks_Soft_Int_SoundSet","Tracks_Surface_Squeaks_Hard_Int_SoundSet","Tanks_Material_Strain_Int_SoundSet"};
+			soundSetsExt[] = {
+				"KV1_Engine_RMP0_EXT_SoundSet",
+				"KV1_Engine_RMP1_EXT_SoundSet",
+				"KV1_Engine_RMP2_EXT_SoundSet",
+				"KV1_Engine_RMP3_EXT_SoundSet",
+				"KV1_Engine_RMP4_EXT_SoundSet",
+				"KV1_Engine_RMP5_EXT_SoundSet",
+				"KV1_Engine_RMP6_EXT_SoundSet",
+				"KV1_EngineBurst_EXT_SoundSet",
+				"KV1_Exhaust_1_EXT_SoundSet",
+				"KV1_Exhaust_2_EXT_SoundSet",
+				"KV1_Exhaust_3_EXT_SoundSet",
+				"KV1_Exhaust_4_EXT_SoundSet",
+				"KV1_Exhaust_5_EXT_SoundSet",
+				"KV1_Exhaust_6_EXT_SoundSet",
+				"KV1_Exhaust_7_EXT_SoundSet",
+				"MBT_02_Tracks_01_EXT_SoundSet","MBT_02_Tracks_02_EXT_SoundSet","MBT_02_Tracks_03_EXT_SoundSet","MBT_02_Tracks_04_EXT_SoundSet","MBT_02_Tracks_05_EXT_SoundSet","MBT_02_Tracks_06_EXT_SoundSet","MBT_02_Rain_EXT_SoundSet","MBT_02_Tracks_Brake_Hard_EXT_SoundSet","MBT_02_Tracks_Brake_Soft_EXT_SoundSet","MBT_02_Tracks_Turn_Hard_EXT_SoundSet","MBT_02_Tracks_Turn_Soft_EXT_SoundSet","MBT_02_Drive_Water_EXT_SoundSet","Tracks_Movement_Dirt_Ext_01_SoundSet","Tracks_Surface_Soft_Ext_SoundSet","Tracks_Surface_Hard_Ext_SoundSet","Tracks_Surface_Sand_Ext_SoundSet","Tracks_Surface_Squeaks_Soft_Ext_SoundSet","Tracks_Surface_Squeaks_Hard_Ext_SoundSet"};
+		};
+	};
 		
 };
