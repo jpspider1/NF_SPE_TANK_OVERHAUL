@@ -1981,7 +1981,7 @@ class CfgSoundSets
 		soundShaders[] = {"T34_Exhaust_Idle_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
+		volumeFactor = "2.25 * 0.555";
 	};
 	
 	class T34_Exhaust_Slow_EXT_SoundSet
@@ -1997,7 +1997,7 @@ class CfgSoundSets
 		soundShaders[] = {"T34_Exhaust_Slow_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;	
+		volumeFactor = "2.25 * 0.70";
 	};
 	
 	class T34_Exhaust_Mid_EXT_SoundSet
@@ -2013,7 +2013,7 @@ class CfgSoundSets
 		soundShaders[] = {"T34_Exhaust_Mid_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
+		volumeFactor = "2.25 * 0.80";
 	};
 	
 	class T34_Exhaust_Fast_EXT_SoundSet
@@ -2029,7 +2029,7 @@ class CfgSoundSets
 		soundShaders[] = {"T34_Exhaust_Fast_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
+		volumeFactor = "2.25 * 1.00";
 	};
 
 	
