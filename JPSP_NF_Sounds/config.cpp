@@ -310,7 +310,7 @@ class CfgSoundShaders
 	class T34_Tracks_Slow_EXT_SoundShader
 	{
 		frequency = "(0.80 + (0.3 * ((abs(speed)) factor [0, 12]))) max (0.8 + 0.2 * ((((abs(speed)) factor [5,3]) * (angVelocity factor [0,1]))))";
-		range = 800;
+		range = 400;
 		samples[] = {{"JPSP_NF_Sounds\sounds\T34\Ext\T-34_Exterior_Tracks-001.ogg",1}};
 		volume = "(1 - CustomSoundController13) * ((((abs(speed)) factor [ 0, 1]) * ((abs(speed)) factor [6, 4])) max (((abs(speed)) factor [5,3]) * 0.8 * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
 		rangeCurve[] =
@@ -322,7 +322,7 @@ class CfgSoundShaders
 	class T34_Tracks_Mid_EXT_SoundShader
 	{
 		frequency = "(0.80 + (0.3 * ((abs(speed)) factor [0, 12]))) max (0.8 + 0.2 * ((((abs(speed)) factor [5,3]) * (angVelocity factor [0,1]))))";
-		range = 2000;
+		range = 500;
 		samples[] = {
 			{"JPSP_NF_Sounds\sounds\T34\Ext\T-34_Exterior_Tracks-002.ogg",1}
 		};
@@ -336,7 +336,7 @@ class CfgSoundShaders
 	class T34_Tracks_Fast_EXT_SoundShader
 	{
 		frequency = "(0.80 + (0.3 * ((abs(speed)) factor [0, 12]))) max (0.8 + 0.2 * ((((abs(speed)) factor [5,3]) * (angVelocity factor [0,1]))))";
-		range = 2000;
+		range = 600;
 		samples[] = {{"JPSP_NF_Sounds\sounds\T34\Ext\T-34_Exterior_Tracks-004.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (((abs(speed)) factor [ 7, 8]))";
 		rangeCurve[] =
@@ -1955,7 +1955,7 @@ class CfgSoundSets
 		soundShaders[] = {"T34_Tracks_Slow_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 1.5;
+		volumeFactor = 2.0;
 
 	};
 	class T34_Tracks_Mid_EXT_SoundSet: T34_Tracks_Slow_EXT_SoundSet
