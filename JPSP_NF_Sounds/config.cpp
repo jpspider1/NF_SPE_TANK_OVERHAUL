@@ -390,33 +390,89 @@ class CfgSoundShaders
 	class T34_Exhaust_Idle_EXT_SoundShader
 	{
 		frequency = "0.9 + ( 0.10 * (rpm factor [0 , 750 ]))";
-		range = 300;
+		range = 800;
 		samples[] = {{"JPSP_NF_Sounds\sounds\T34\Ext\T-34_Exterior_Exhasut-001.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (1.40 * engineOn * (rpm factor [ 0, 150]) * (rpm factor [ 750, 700 ]))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
 	};
 	
 	class T34_Exhaust_Slow_EXT_SoundShader
 	{
 		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 475;
+		range = 2000;
 		samples[] = {{"JPSP_NF_Sounds\sounds\T34\Ext\T-34_Exterior_Exhasut-002.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
 	};
 	
 	class T34_Exhaust_Mid_EXT_SoundShader
 	{
 		frequency = "0.8 + ( 0.26 * (rpm factor [ 1100 , 2800 ]))";
-		range = 640;
+		range = 2000;
 		samples[] = {{"JPSP_NF_Sounds\sounds\T34\Ext\T-34_Exterior_Exhasut-004.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (1.35 * engineOn * ((rpm factor [ 1100 , 1600 ]) * (rpm factor [ 2800, 2200 ])) max (((rpm factor [ 1100 , 1600 ]) * (rpm factor [ 2800 , 2200 ])) * (angVelocity factor [0.2,0.4])))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
 	};
 	
 	class T34_Exhaust_Fast_EXT_SoundShader
 	{
 		frequency = "0.8 + ( 0.30 * (rpm factor [ 2200 , 3000 ])) + (0.12 * ((abs(speed)) factor [9,13]))";
-		range = 700;
+		range = 2000;
 		samples[] = {{"JPSP_NF_Sounds\sounds\T34\Ext\T-34_Exterior_Exhasut-006.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (1.45 * engineOn * (rpm factor [ 2200 , 2800 ]))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
 	};
 
 	class T34_Exhaust_Idle_INT_SoundShader
