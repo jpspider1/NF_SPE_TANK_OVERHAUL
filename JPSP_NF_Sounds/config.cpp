@@ -3153,7 +3153,7 @@ class CfgVehicles
 		{
 			soundSetsInt[] = {
 				"T34_Engine_RMP0_INT_SoundSet","T34_Engine_RMP1_INT_SoundSet","T34_Engine_RMP2_INT_SoundSet","T34_Engine_RMP3_INT_SoundSet","T34_Engine_RMP4_INT_SoundSet","T34_Engine_RMP5_INT_SoundSet","T34_EngineBurst_INT_SoundSet",
-				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet"
+				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet",
 				"T34_Tracks_Slow_INT_SoundSet","T34_Tracks_Mid_INT_SoundSet","T34_Tracks_Fast_INT_SoundSet","MBT_01_Interior_Tone_Engine_Off_SoundSet","MBT_01_Interior_Tone_Engine_On_SoundSet","MBT_01_Rattling_INT_SoundSet","MBT_01_Rain_INT_SoundSet","MBT_01_Tracks_Brake_Hard_INT_SoundSet","MBT_01_Tracks_Brake_Soft_INT_SoundSet","MBT_01_Tracks_Turn_Hard_INT_SoundSet","MBT_01_Tracks_Turn_Soft_INT_SoundSet","MBT_01_Drive_Water_INT_SoundSet","Tracks_Movement_Dirt_Int_01_SoundSet","Tracks_Surface_Soft_Int_SoundSet","Tracks_Surface_Sand_Int_SoundSet","Tracks_Surface_Squeaks_Soft_Int_SoundSet","Tracks_Surface_Squeaks_Hard_Int_SoundSet","Tanks_Material_Strain_Int_SoundSet"};
 			soundSetsExt[] = {
 				"T34_Engine_RMP0_EXT_SoundSet","T34_Engine_RMP1_EXT_SoundSet","T34_Engine_RMP2_EXT_SoundSet","T34_Engine_RMP3_EXT_SoundSet","T34_Engine_RMP4_EXT_SoundSet","T34_Engine_RMP5_EXT_SoundSet","T34_EngineBurst_EXT_SoundSet",
@@ -3173,7 +3173,7 @@ class CfgVehicles
 		{
 			soundSetsInt[] = {
 				"T34_Engine_RMP0_INT_SoundSet","T34_Engine_RMP1_INT_SoundSet","T34_Engine_RMP2_INT_SoundSet","T34_Engine_RMP3_INT_SoundSet","T34_Engine_RMP4_INT_SoundSet","T34_Engine_RMP5_INT_SoundSet","T34_EngineBurst_INT_SoundSet",
-				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet"
+				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet",
 				"T34_Tracks_Slow_INT_SoundSet","T34_Tracks_Mid_INT_SoundSet","T34_Tracks_Fast_INT_SoundSet","MBT_01_Interior_Tone_Engine_Off_SoundSet","MBT_01_Interior_Tone_Engine_On_SoundSet","MBT_01_Rattling_INT_SoundSet","MBT_01_Rain_INT_SoundSet","MBT_01_Tracks_Brake_Hard_INT_SoundSet","MBT_01_Tracks_Brake_Soft_INT_SoundSet","MBT_01_Tracks_Turn_Hard_INT_SoundSet","MBT_01_Tracks_Turn_Soft_INT_SoundSet","MBT_01_Drive_Water_INT_SoundSet","Tracks_Movement_Dirt_Int_01_SoundSet","Tracks_Surface_Soft_Int_SoundSet","Tracks_Surface_Sand_Int_SoundSet","Tracks_Surface_Squeaks_Soft_Int_SoundSet","Tracks_Surface_Squeaks_Hard_Int_SoundSet","Tanks_Material_Strain_Int_SoundSet"};
 			soundSetsExt[] = {
 				"T34_Engine_RMP0_EXT_SoundSet","T34_Engine_RMP1_EXT_SoundSet","T34_Engine_RMP2_EXT_SoundSet","T34_Engine_RMP3_EXT_SoundSet","T34_Engine_RMP4_EXT_SoundSet","T34_Engine_RMP5_EXT_SoundSet","T34_EngineBurst_EXT_SoundSet",
@@ -3193,7 +3193,7 @@ class CfgVehicles
 		{
 			soundSetsInt[] = {
 				"T34_Engine_RMP0_INT_SoundSet","T34_Engine_RMP1_INT_SoundSet","T34_Engine_RMP2_INT_SoundSet","T34_Engine_RMP3_INT_SoundSet","T34_Engine_RMP4_INT_SoundSet","T34_Engine_RMP5_INT_SoundSet","T34_EngineBurst_INT_SoundSet",
-				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet"
+				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet",
 				"T34_Tracks_Slow_INT_SoundSet","T34_Tracks_Mid_INT_SoundSet","T34_Tracks_Fast_INT_SoundSet","MBT_01_Interior_Tone_Engine_Off_SoundSet","MBT_01_Interior_Tone_Engine_On_SoundSet","MBT_01_Rattling_INT_SoundSet","MBT_01_Rain_INT_SoundSet","MBT_01_Tracks_Brake_Hard_INT_SoundSet","MBT_01_Tracks_Brake_Soft_INT_SoundSet","MBT_01_Tracks_Turn_Hard_INT_SoundSet","MBT_01_Tracks_Turn_Soft_INT_SoundSet","MBT_01_Drive_Water_INT_SoundSet","Tracks_Movement_Dirt_Int_01_SoundSet","Tracks_Surface_Soft_Int_SoundSet","Tracks_Surface_Sand_Int_SoundSet","Tracks_Surface_Squeaks_Soft_Int_SoundSet","Tracks_Surface_Squeaks_Hard_Int_SoundSet","Tanks_Material_Strain_Int_SoundSet"};
 			soundSetsExt[] = {
 				"T34_Engine_RMP0_EXT_SoundSet","T34_Engine_RMP1_EXT_SoundSet","T34_Engine_RMP2_EXT_SoundSet","T34_Engine_RMP3_EXT_SoundSet","T34_Engine_RMP4_EXT_SoundSet","T34_Engine_RMP5_EXT_SoundSet","T34_EngineBurst_EXT_SoundSet",
@@ -3213,7 +3213,7 @@ class CfgVehicles
 		{
 			soundSetsInt[] = {
 				"T34_Engine_RMP0_INT_SoundSet","T34_Engine_RMP1_INT_SoundSet","T34_Engine_RMP2_INT_SoundSet","T34_Engine_RMP3_INT_SoundSet","T34_Engine_RMP4_INT_SoundSet","T34_Engine_RMP5_INT_SoundSet","T34_EngineBurst_INT_SoundSet",
-				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet"
+				"T34_Exhaust_Idle_INT_SoundSet","T34_Exhaust_Slow_INT_SoundSet","T34_Exhaust_Mid_INT_SoundSet","T34_Exhaust_Fast_INT_SoundSet",
 				"T34_Tracks_Slow_INT_SoundSet","T34_Tracks_Mid_INT_SoundSet","T34_Tracks_Fast_INT_SoundSet","MBT_01_Interior_Tone_Engine_Off_SoundSet","MBT_01_Interior_Tone_Engine_On_SoundSet","MBT_01_Rattling_INT_SoundSet","MBT_01_Rain_INT_SoundSet","MBT_01_Tracks_Brake_Hard_INT_SoundSet","MBT_01_Tracks_Brake_Soft_INT_SoundSet","MBT_01_Tracks_Turn_Hard_INT_SoundSet","MBT_01_Tracks_Turn_Soft_INT_SoundSet","MBT_01_Drive_Water_INT_SoundSet","Tracks_Movement_Dirt_Int_01_SoundSet","Tracks_Surface_Soft_Int_SoundSet","Tracks_Surface_Sand_Int_SoundSet","Tracks_Surface_Squeaks_Soft_Int_SoundSet","Tracks_Surface_Squeaks_Hard_Int_SoundSet","Tanks_Material_Strain_Int_SoundSet"};
 			soundSetsExt[] = {
 				"T34_Engine_RMP0_EXT_SoundSet","T34_Engine_RMP1_EXT_SoundSet","T34_Engine_RMP2_EXT_SoundSet","T34_Engine_RMP3_EXT_SoundSet","T34_Engine_RMP4_EXT_SoundSet","T34_Engine_RMP5_EXT_SoundSet","T34_EngineBurst_EXT_SoundSet",
