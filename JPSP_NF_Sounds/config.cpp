@@ -806,117 +806,120 @@ class CfgSoundShaders
         };
 	};
 
-	class T70_Exhaust_1_EXT_SoundShader
+	class T70_Exhaust_Idle_EXT_SoundShader
 	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 300;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-001.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_2_EXT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
+		frequency = "0.9 + ( 0.10 * (rpm factor [0 , 750 ]))";
 		range = 400;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-002.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-001.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.40 * engineOn * (rpm factor [ 0, 150]) * (rpm factor [ 750, 700 ]))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
 	};
-
-	class T70_Exhaust_3_EXT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 500;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-003.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_4_EXT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 600;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-004.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_5_EXT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 700;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-005.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_6_EXT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 800;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-006.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_7_EXT_SoundShader
+	
+	class T70_Exhaust_Slow_EXT_SoundShader
 	{
 		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
 		range = 1000;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-007.ogg",1}};
+		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-002.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
 	};
 	
-
-	class T70_Exhaust_1_INT_SoundShader
+	class T70_Exhaust_Mid_EXT_SoundShader
 	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 300;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-001.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+		frequency = "0.8 + ( 0.26 * (rpm factor [ 1100 , 2800 ]))";
+		range = 1000;
+		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-004.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.35 * engineOn * ((rpm factor [ 1100 , 1600 ]) * (rpm factor [ 2800, 2200 ])) max (((rpm factor [ 1100 , 1600 ]) * (rpm factor [ 2800 , 2200 ])) * (angVelocity factor [0.2,0.4])))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
+	};
+	
+	class T70_Exhaust_Fast_EXT_SoundShader
+	{
+		frequency = "0.8 + ( 0.30 * (rpm factor [ 2200 , 3000 ])) + (0.12 * ((abs(speed)) factor [9,13]))";
+		range = 1000;
+		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Ext\T-70_Exterior_Exhaust-007.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.45 * engineOn * (rpm factor [ 2200 , 2800 ]))";
+		rangeCurve[] =
+        {
+            { 0, 1 },
+            { 0.1, 0.9 },
+            { 0.2, 0.8 },
+            { 0.3, 0.7 },
+            { 0.4, 0.6 },
+            { 0.5, 0.5 },
+            { 0.6, 0.4 },
+            { 0.7, 0.3 },
+            { 0.8, 0.2 },
+            { 0.9, 0.1 },
+            { 1, 0 }
+        };
 	};
 
-	class T70_Exhaust_2_INT_SoundShader
+	class T70_Exhaust_Idle_INT_SoundShader
+	{
+		frequency = "0.9 + ( 0.10 * (rpm factor [0 , 750 ]))";
+		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-001.ogg",1}};
+		volume = "(1 - CustomSoundController13) * (1.20 * engineOn * (rpm factor [ 200, 700]) * (rpm factor [ 750, 700 ]))";
+	};
+	
+	class T70_Exhaust_Slow_INT_SoundShader
 	{
 		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 400;
 		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-002.ogg",1}};
 		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
 	};
-
-	class T70_Exhaust_3_INT_SoundShader
+	
+	class T70_Exhaust_Mid_INT_SoundShader
 	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 500;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-003.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_4_INT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 600;
+		frequency = "0.8 + ( 0.26 * (rpm factor [ 1100 , 2800 ]))";
 		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-004.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+		volume = "(1 - CustomSoundController13) * (1.35 * engineOn * ((rpm factor [ 1100 , 1600 ]) * (rpm factor [ 2800, 2200 ])) max (((rpm factor [ 1100 , 1600 ]) * (rpm factor [ 2800 , 2200 ])) * (angVelocity factor [0.2,0.4])))";
 	};
-
-	class T70_Exhaust_5_INT_SoundShader
+	
+	class T70_Exhaust_Fast_INT_SoundShader
 	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 700;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-005.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_6_INT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 800;
-		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-006.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
-	};
-
-	class T70_Exhaust_7_INT_SoundShader
-	{
-		frequency = "0.8 + ((0.23 * (rpm factor [ 700 , 1600 ])) max (0.3 * (angVelocity factor [0,1])))";
-		range = 1000;
+		frequency = "0.8 + ( 0.30 * (rpm factor [ 2200 , 3000 ])) + (0.12 * ((abs(speed)) factor [9,13]))";
 		samples[] = {{"JPSP_NF_Sounds\sounds\T70\Int\T-70_Interior_Exhaust-007.ogg",1}};
-		volume = "(1 - CustomSoundController13) * (1.25 * engineOn * ((rpm factor [ 700, 750 ]) * (rpm factor [ 1600 , 1100 ])) max (((rpm factor [ 700 , 750 ]) * (rpm factor [ 1600 , 1100 ])) * (angVelocity factor [0,0.2]) * (angVelocity factor [0.4,0.2])))";
+		volume = "(1 - CustomSoundController13) * (1.45 * engineOn * (rpm factor [ 2200 , 2800 ]))";
 	};
 
 
@@ -2188,7 +2191,7 @@ class CfgSoundSets
 		loop = 0;
 	};
 
-	class T70_Exhaust_1_EXT_SoundSet
+	class T70_Exhaust_Idle_EXT_SoundSet
 	{
 		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
@@ -2198,13 +2201,13 @@ class CfgSoundSets
 		posOffset[] = {0,-1.8,0};
 		shape = "SPE_tank_exhaust_rearSemispace";
 		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_1_EXT_SoundShader"};
+		soundShaders[] = {"T70_Exhaust_Idle_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
+		volumeFactor = "2.25 * 0.555";
 	};
-
-	class T70_Exhaust_2_EXT_SoundSet
+	
+	class T70_Exhaust_Slow_EXT_SoundSet
 	{
 		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
@@ -2214,13 +2217,13 @@ class CfgSoundSets
 		posOffset[] = {0,-1.8,0};
 		shape = "SPE_tank_exhaust_rearSemispace";
 		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_2_EXT_SoundShader"};
+		soundShaders[] = {"T70_Exhaust_Slow_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
+		volumeFactor = "2.25 * 0.70";
 	};
-
-	class T70_Exhaust_3_EXT_SoundSet
+	
+	class T70_Exhaust_Mid_EXT_SoundSet
 	{
 		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
@@ -2230,13 +2233,13 @@ class CfgSoundSets
 		posOffset[] = {0,-1.8,0};
 		shape = "SPE_tank_exhaust_rearSemispace";
 		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_3_EXT_SoundShader"};
+		soundShaders[] = {"T70_Exhaust_Mid_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
+		volumeFactor = "2.25 * 0.80";
 	};
-
-	class T70_Exhaust_4_EXT_SoundSet
+	
+	class T70_Exhaust_Fast_EXT_SoundSet
 	{
 		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
@@ -2246,173 +2249,48 @@ class CfgSoundSets
 		posOffset[] = {0,-1.8,0};
 		shape = "SPE_tank_exhaust_rearSemispace";
 		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_4_EXT_SoundShader"};
+		soundShaders[] = {"T70_Exhaust_Fast_EXT_SoundShader"};
 		spatial = 1;
 		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
-	};
-
-	class T70_Exhaust_5_EXT_SoundSet
-	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
-		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_5_EXT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
-	};
-
-	class T70_Exhaust_6_EXT_SoundSet
-	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
-		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_6_EXT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
-	};
-
-	class T70_Exhaust_7_EXT_SoundSet
-	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
-		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_7_EXT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
+		volumeFactor = "2.25 * 1.00";
 	};
 
 	
-	class T70_Exhaust_1_INT_SoundSet
+	class T70_Exhaust_Idle_INT_SoundSet
 	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_1_INT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		soundShaders[] = {"T70_Exhaust_Idle_INT_SoundShader"};
+		spatial = 0;
 		volumeFactor = 0.7;
 	};
-
-	class T70_Exhaust_2_INT_SoundSet
+	
+	class T70_Exhaust_Slow_INT_SoundSet
 	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_2_INT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		soundShaders[] = {"T70_Exhaust_Slow_INT_SoundShader"};
+		spatial = 0;
 		volumeFactor = 0.7;
 	};
-
-	class T70_Exhaust_3_INT_SoundSet
+	
+	class T70_Exhaust_Mid_INT_SoundSet
 	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_3_INT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		soundShaders[] = {"T70_Exhaust_Mid_INT_SoundShader"};
+		spatial = 0;
 		volumeFactor = 0.7;
 	};
-
-	class T70_Exhaust_4_INT_SoundSet
+	
+	class T70_Exhaust_Fast_INT_SoundSet
 	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
 		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_4_INT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
+		sound3DProcessingType = "VehicleInt_Back_3DProcessingType";
+		soundShaders[] = {"T70_Exhaust_Fast_INT_SoundShader"};
+		spatial = 0;
 		volumeFactor = 0.7;
 	};
-
-	class T70_Exhaust_5_INT_SoundSet
-	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
-		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_5_INT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
-	};
-
-	class T70_Exhaust_6_INT_SoundSet
-	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
-		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_6_INT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
-	};
-
-	class T70_Exhaust_7_INT_SoundSet
-	{
-		distanceFilter = "SPE_defaultVehicleDistanceFilter";
-		loop = 1;
-		obstructionFactor = 0.2;
-		occlusionFactor = 0.2;
-		occlusionObstruction = 1;
-		posOffset[] = {0,-1.8,0};
-		shape = "SPE_tank_exhaust_rearSemispace";
-		sound3DProcessingType = "SPE_tank_exhaust_ext_3DProcessingType";
-		soundShaders[] = {"T70_Exhaust_7_INT_SoundShader"};
-		spatial = 1;
-		volumeCurve = "InverseSquare2Curve";
-		volumeFactor = 0.7;
-	};
-
 	// KV1 //////////////////////////////////////////////////////////////////////////////////////
 
 	class KV1_Engine_RMP0_EXT_SoundSet: Engine_Base_RPM0_EXT_SoundSet
@@ -3210,6 +3088,7 @@ class CfgVehicles
 				"T70_Engine_RMP5_INT_SoundSet",
 				"T70_Engine_RMP6_INT_SoundSet",
 				"T70_EngineBurst_INT_SoundSet",
+				"T70_Exhaust_Idle_INT_SoundSet","T70_Exhaust_Slow_INT_SoundSet","T70_Exhaust_Mid_INT_SoundSet","T70_Exhaust_Fast_INT_SoundSet",
 				"T34_Tracks_Slow_EXT_SoundSet","T34_Tracks_Mid_EXT_SoundSet","T34_Tracks_Fast_EXT_SoundSet","MBT_01_Interior_Tone_Engine_Off_SoundSet","MBT_01_Interior_Tone_Engine_On_SoundSet","MBT_01_Rattling_INT_SoundSet","MBT_01_Rain_INT_SoundSet","MBT_01_Tracks_Brake_Hard_INT_SoundSet","MBT_01_Tracks_Brake_Soft_INT_SoundSet","MBT_01_Tracks_Turn_Hard_INT_SoundSet","MBT_01_Tracks_Turn_Soft_INT_SoundSet","MBT_01_Drive_Water_INT_SoundSet","Tracks_Movement_Dirt_Int_01_SoundSet","Tracks_Surface_Soft_Int_SoundSet","Tracks_Surface_Sand_Int_SoundSet","Tracks_Surface_Squeaks_Soft_Int_SoundSet","Tracks_Surface_Squeaks_Hard_Int_SoundSet","Tanks_Material_Strain_Int_SoundSet"};
 			soundSetsExt[] = {
 				"T70_Engine_RMP0_EXT_SoundSet",
@@ -3220,6 +3099,7 @@ class CfgVehicles
 				"T70_Engine_RMP5_EXT_SoundSet",
 				"T70_Engine_RMP6_EXT_SoundSet",
 				"T70_EngineBurst_EXT_SoundSet",
+				"T70_Exhaust_Idle_EXT_SoundSet","T70_Exhaust_Slow_EXT_SoundSet","T70_Exhaust_Mid_EXT_SoundSet","T70_Exhaust_Fast_EXT_SoundSet",
 				"T34_Tracks_Slow_EXT_SoundSet","T34_Tracks_Mid_EXT_SoundSet","T34_Tracks_Fast_EXT_SoundSet","MBT_02_Rain_EXT_SoundSet","MBT_02_Tracks_Brake_Hard_EXT_SoundSet","MBT_02_Tracks_Brake_Soft_EXT_SoundSet","MBT_02_Tracks_Turn_Hard_EXT_SoundSet","MBT_02_Tracks_Turn_Soft_EXT_SoundSet","MBT_02_Drive_Water_EXT_SoundSet","Tracks_Movement_Dirt_Ext_01_SoundSet","Tracks_Surface_Soft_Ext_SoundSet","Tracks_Surface_Hard_Ext_SoundSet","Tracks_Surface_Sand_Ext_SoundSet","Tracks_Surface_Squeaks_Soft_Ext_SoundSet","Tracks_Surface_Squeaks_Hard_Ext_SoundSet"};
 		};
 	};
@@ -3244,13 +3124,7 @@ class CfgVehicles
 				"T70_Engine_RMP5_INT_SoundSet",
 				"T70_Engine_RMP6_INT_SoundSet",
 				"T70_EngineBurst_INT_SoundSet",
-				"T70_Exhaust_1_INT_SoundSet",
-				"T70_Exhaust_2_INT_SoundSet",
-				"T70_Exhaust_3_INT_SoundSet",
-				"T70_Exhaust_4_INT_SoundSet",
-				"T70_Exhaust_5_INT_SoundSet",
-				"T70_Exhaust_6_INT_SoundSet",
-				"T70_Exhaust_7_INT_SoundSet",
+				"T70_Exhaust_Idle_INT_SoundSet","T70_Exhaust_Slow_INT_SoundSet","T70_Exhaust_Mid_INT_SoundSet","T70_Exhaust_Fast_INT_SoundSet",
 				"T34_Tracks_Slow_EXT_SoundSet","T34_Tracks_Mid_EXT_SoundSet","T34_Tracks_Fast_EXT_SoundSet","MBT_01_Interior_Tone_Engine_Off_SoundSet","MBT_01_Interior_Tone_Engine_On_SoundSet","MBT_01_Rattling_INT_SoundSet","MBT_01_Rain_INT_SoundSet","MBT_01_Tracks_Brake_Hard_INT_SoundSet","MBT_01_Tracks_Brake_Soft_INT_SoundSet","MBT_01_Tracks_Turn_Hard_INT_SoundSet","MBT_01_Tracks_Turn_Soft_INT_SoundSet","MBT_01_Drive_Water_INT_SoundSet","Tracks_Movement_Dirt_Int_01_SoundSet","Tracks_Surface_Soft_Int_SoundSet","Tracks_Surface_Sand_Int_SoundSet","Tracks_Surface_Squeaks_Soft_Int_SoundSet","Tracks_Surface_Squeaks_Hard_Int_SoundSet","Tanks_Material_Strain_Int_SoundSet"};
 			soundSetsExt[] = {
 				"T70_Engine_RMP0_EXT_SoundSet",
@@ -3261,13 +3135,7 @@ class CfgVehicles
 				"T70_Engine_RMP5_EXT_SoundSet",
 				"T70_Engine_RMP6_EXT_SoundSet",
 				"T70_EngineBurst_EXT_SoundSet",
-				"T70_Exhaust_1_EXT_SoundSet",
-				"T70_Exhaust_2_EXT_SoundSet",
-				"T70_Exhaust_3_EXT_SoundSet",
-				"T70_Exhaust_4_EXT_SoundSet",
-				"T70_Exhaust_5_EXT_SoundSet",
-				"T70_Exhaust_6_EXT_SoundSet",
-				"T70_Exhaust_7_EXT_SoundSet",
+				"T70_Exhaust_Idle_EXT_SoundSet","T70_Exhaust_Slow_EXT_SoundSet","T70_Exhaust_Mid_EXT_SoundSet","T70_Exhaust_Fast_EXT_SoundSet",
 				"T34_Tracks_Slow_EXT_SoundSet","T34_Tracks_Mid_EXT_SoundSet","T34_Tracks_Fast_EXT_SoundSet","MBT_02_Rain_EXT_SoundSet","MBT_02_Tracks_Brake_Hard_EXT_SoundSet","MBT_02_Tracks_Brake_Soft_EXT_SoundSet","MBT_02_Tracks_Turn_Hard_EXT_SoundSet","MBT_02_Tracks_Turn_Soft_EXT_SoundSet","MBT_02_Drive_Water_EXT_SoundSet","Tracks_Movement_Dirt_Ext_01_SoundSet","Tracks_Surface_Soft_Ext_SoundSet","Tracks_Surface_Hard_Ext_SoundSet","Tracks_Surface_Sand_Ext_SoundSet","Tracks_Surface_Squeaks_Soft_Ext_SoundSet","Tracks_Surface_Squeaks_Hard_Ext_SoundSet"};
 		};
 	};
